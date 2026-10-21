@@ -1,0 +1,1969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Responsive Navbar</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="contact-info-style.css">   
+    <!-- Custom CSS -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar */
+        .custom-navbar {
+            background-color: #0878f9;
+            min-height: 42px;
+            border: 2px solid #00aaff;
+        }
+
+        /* Logo */
+        .logo {
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        /* Navigation Links */
+        .navbar-nav .nav-link {
+            color: white !important;
+            font-size: 11px;
+            margin-left: 20px;
+            transition: 0.3s;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #d9d9d9 !important;
+        }
+
+        /* Mobile menu button */
+        .navbar-toggler {
+            border: 1px solid white;
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+
+        .navbar-toggler-icon {
+            filter: brightness(0) invert(1);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 991px) {
+
+            .custom-navbar {
+                padding: 8px 15px;
+            }
+
+            .navbar-nav {
+                margin-top: 10px;
+            }
+
+            .navbar-nav .nav-link {
+                margin-left: 0;
+                padding: 8px 0;
+                font-size: 14px;
+            }
+        }
+        /* ==========================================
+   CONTACT BANNER
+========================================== */
+
+.renuga-contact-banner {
+    position: relative;
+
+    width: 100%;
+    height: 100px;
+
+    background-image: url("projectim/7538e65066f77ad13f36fd70a871d661c754ceaa.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+}
+
+
+/* ==========================================
+   DARK BLUE OVERLAY
+========================================== */
+
+.renuga-contact-overlay {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(3, 24, 91, 0.88);
+
+    z-index: 1;
+}
+
+
+/* ==========================================
+   CONTENT
+========================================== */
+
+.renuga-contact-banner .container {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* ==========================================
+   CONTACT HEADING
+========================================== */
+
+.renuga-contact-heading {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+
+/* ==========================================
+   BREADCRUMB
+========================================== */
+
+.renuga-contact-breadcrumb {
+    margin: 5px 0 0;
+
+    color: #ffffff;
+
+    font-size: 7px;
+
+    font-weight: 400;
+
+    line-height: 1.4;
+}
+
+
+/* ==========================================
+   HOME
+========================================== */
+
+.renuga-contact-home {
+    color: #ffffff;
+}
+
+
+/* ==========================================
+   SLASH
+========================================== */
+
+.renuga-contact-separator {
+    margin: 0 4px;
+
+    color: #ffffff;
+}
+
+
+/* ==========================================
+   CURRENT PAGE
+========================================== */
+
+.renuga-contact-page {
+    color: #ffffff;
+}
+
+
+/* ==========================================
+   TABLET RESPONSIVE
+========================================== */
+
+@media (min-width: 576px) and (max-width: 991px) {
+
+    .renuga-contact-banner {
+        height: 145px;
+
+        background-position: center;
+    }
+
+    .renuga-contact-heading {
+        font-size: 28px;
+    }
+
+    .renuga-contact-breadcrumb {
+        margin-top: 7px;
+
+        font-size: 10px;
+    }
+}
+
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 575px) {
+
+    .renuga-contact-banner {
+        height: 135px;
+
+        background-position: center;
+    }
+
+    .renuga-contact-heading {
+        font-size: 24px;
+    }
+
+    .renuga-contact-breadcrumb {
+        margin-top: 6px;
+
+        font-size: 9px;
+    }
+}
+
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 400px) {
+
+    .renuga-contact-banner {
+        height: 120px;
+    }
+
+    .renuga-contact-heading {
+        font-size: 21px;
+    }
+
+    .renuga-contact-breadcrumb {
+        font-size: 8px;
+    }
+}
+
+
+/* ==========================================
+   LARGE SCREEN
+========================================== */
+
+@media (min-width: 1200px) {
+
+    .renuga-contact-banner {
+        height: 180px;
+    }
+
+    .renuga-contact-heading {
+        font-size: 32px;
+    }
+
+    .renuga-contact-breadcrumb {
+        font-size: 10px;
+    }
+}
+/* ==========================================
+   CONTACT DETAILS SECTION
+========================================== */
+
+.renuga-contact-details {
+    width: 100%;
+
+    background: #ffffff;
+
+    padding: 20px 0 18px;
+}
+
+
+/* ==========================================
+   TITLE AREA
+========================================== */
+
+.renuga-contact-title-area {
+    text-align: center;
+
+    margin-bottom: 20px;
+}
+
+
+/* ==========================================
+   MAIN TITLE
+========================================== */
+
+.renuga-contact-main-title {
+    margin: 0 0 5px;
+
+    color: #111111;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+
+/* ==========================================
+   SUB TITLE
+========================================== */
+
+.renuga-contact-sub-title {
+    margin: 0;
+
+    color: #777777;
+
+    font-size: 8px;
+
+    font-weight: 400;
+
+    line-height: 1.4;
+}
+
+
+/* ==========================================
+   PHONE CARD
+========================================== */
+
+.renuga-phone-contact-card {
+    width: 100%;
+
+    height: 66px;
+
+    padding: 10px 12px;
+
+    background: #0955b5;
+
+    border-radius: 6px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    transition: 0.3s ease;
+}
+
+
+/* ==========================================
+   PHONE ICON
+========================================== */
+
+.renuga-phone-icon {
+    color: #ffffff;
+
+    font-size: 15px;
+}
+
+
+/* ==========================================
+   PHONE TEXT
+========================================== */
+
+.renuga-phone-text {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 9px;
+
+    font-weight: 500;
+}
+
+
+/* ==========================================
+   EMAIL CARD
+========================================== */
+
+.renuga-email-contact-card {
+    width: 100%;
+
+    height: 66px;
+
+    padding: 10px 12px;
+
+    background: #0955b5;
+
+    border-radius: 6px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    transition: 0.3s ease;
+}
+
+
+/* ==========================================
+   EMAIL ICON
+========================================== */
+
+.renuga-email-icon {
+    color: #ffffff;
+
+    font-size: 15px;
+}
+
+
+/* ==========================================
+   EMAIL TEXT
+========================================== */
+
+.renuga-email-text {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 9px;
+
+    font-weight: 500;
+}
+
+
+/* ==========================================
+   ADDRESS CARD
+========================================== */
+
+.renuga-address-contact-card {
+    width: 100%;
+
+    height: 66px;
+
+    padding: 10px 12px;
+
+    background: #0955b5;
+
+    border-radius: 6px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    transition: 0.3s ease;
+}
+
+
+/* ==========================================
+   ADDRESS ICON
+========================================== */
+
+.renuga-address-icon {
+    color: #ffffff;
+
+    font-size: 15px;
+}
+
+
+/* ==========================================
+   ADDRESS TEXT
+========================================== */
+
+.renuga-address-text {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 9px;
+
+    font-weight: 500;
+
+    line-height: 1.2;
+}
+
+
+/* ==========================================
+   HOVER EFFECT
+========================================== */
+
+.renuga-phone-contact-card:hover,
+.renuga-email-contact-card:hover,
+.renuga-address-contact-card:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .renuga-contact-details {
+        padding: 35px 0;
+    }
+
+    .renuga-contact-main-title {
+        font-size: 25px;
+    }
+
+    .renuga-contact-sub-title {
+        font-size: 10px;
+    }
+
+    .renuga-phone-contact-card,
+    .renuga-email-contact-card,
+    .renuga-address-contact-card {
+
+        height: 85px;
+
+        padding: 13px;
+    }
+
+    .renuga-phone-icon,
+    .renuga-email-icon,
+    .renuga-address-icon {
+
+        font-size: 18px;
+    }
+
+    .renuga-phone-text,
+    .renuga-email-text,
+    .renuga-address-text {
+
+        font-size: 10px;
+    }
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 767px) {
+
+    .renuga-contact-details {
+        padding: 35px 15px;
+    }
+
+    .renuga-contact-title-area {
+        margin-bottom: 25px;
+    }
+
+    .renuga-contact-main-title {
+        font-size: 23px;
+    }
+
+    .renuga-contact-sub-title {
+        font-size: 10px;
+    }
+
+    .renuga-phone-contact-card,
+    .renuga-email-contact-card,
+    .renuga-address-contact-card {
+
+        height: 85px;
+
+        padding: 14px;
+    }
+
+    .renuga-phone-icon,
+    .renuga-email-icon,
+    .renuga-address-icon {
+
+        font-size: 18px;
+    }
+
+    .renuga-phone-text,
+    .renuga-email-text,
+    .renuga-address-text {
+
+        font-size: 11px;
+    }
+}
+
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 400px) {
+
+    .renuga-contact-details {
+        padding: 30px 12px;
+    }
+
+    .renuga-contact-main-title {
+        font-size: 21px;
+    }
+
+    .renuga-contact-sub-title {
+        font-size: 9px;
+    }
+
+    .renuga-phone-contact-card,
+    .renuga-email-contact-card,
+    .renuga-address-contact-card {
+
+        height: 80px;
+
+        padding: 12px;
+    }
+
+    .renuga-phone-text,
+    .renuga-email-text,
+    .renuga-address-text {
+
+        font-size: 10px;
+    }
+}
+/* ==========================================
+   CONTACT MESSAGE SECTION
+========================================== */
+
+.renuga-message-area {
+    position: relative;
+
+    width: 100%;
+    min-height: 342px;
+
+    background: #e9f3ff;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+}
+
+
+/* ==========================================
+   LEFT BACKGROUND SHAPE
+========================================== */
+
+.renuga-message-left-shape {
+    position: absolute;
+
+    left: -85px;
+    top: 23px;
+
+    width: 260px;
+    height: 260px;
+
+    background: rgba(255, 255, 255, 0.78);
+
+    transform: rotate(30deg);
+
+    border-radius: 12px;
+
+    z-index: 0;
+}
+
+
+/* ==========================================
+   RIGHT BACKGROUND SHAPE
+========================================== */
+
+.renuga-message-right-shape {
+    position: absolute;
+
+    right: -85px;
+    top: 23px;
+
+    width: 260px;
+    height: 260px;
+
+    background: rgba(255, 255, 255, 0.78);
+
+    transform: rotate(30deg);
+
+    border-radius: 12px;
+
+    z-index: 0;
+}
+
+
+/* ==========================================
+   MAIN CONTAINER
+========================================== */
+
+.renuga-message-container {
+    position: relative;
+
+    z-index: 3;
+
+    padding-top: 22px;
+    padding-bottom: 22px;
+}
+
+
+/* ==========================================
+   HEADING
+========================================== */
+
+.renuga-message-heading {
+    text-align: center;
+
+    margin-bottom: 19px;
+}
+
+
+.renuga-message-heading h2 {
+    margin: 0;
+
+    color: #171717;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    line-height: 1.25;
+}
+
+
+/* ==========================================
+   FORM
+========================================== */
+
+.renuga-message-form {
+    width: 100%;
+}
+
+
+/* ==========================================
+   INPUT FIELD
+========================================== */
+
+.renuga-message-input {
+    width: 100%;
+
+    height: 27px;
+
+    border: 1px solid #d2d2d2;
+
+    border-radius: 3px;
+
+    background: #ffffff;
+
+    color: #333333;
+
+    font-size: 7px;
+
+    padding: 5px 10px;
+
+    box-shadow: none;
+}
+
+
+.renuga-message-input::placeholder {
+    color: #777777;
+
+    opacity: 1;
+}
+
+
+.renuga-message-input:focus {
+    border-color: #1680f5;
+
+    box-shadow: 0 0 0 2px rgba(22, 128, 245, 0.08);
+}
+
+
+/* ==========================================
+   PHONE FIELD
+========================================== */
+
+.renuga-message-field {
+    margin-top: 9px;
+}
+
+
+/* ==========================================
+   TEXTAREA
+========================================== */
+
+.renuga-message-textarea {
+    width: 100%;
+
+    height: 74px;
+
+    resize: none;
+
+    border: 1px solid #d2d2d2;
+
+    border-radius: 3px;
+
+    background: #ffffff;
+
+    color: #333333;
+
+    font-size: 7px;
+
+    padding: 9px 10px;
+
+    box-shadow: none;
+}
+
+
+.renuga-message-textarea::placeholder {
+    color: #777777;
+
+    opacity: 1;
+}
+
+
+.renuga-message-textarea:focus {
+    border-color: #1680f5;
+
+    box-shadow: 0 0 0 2px rgba(22, 128, 245, 0.08);
+}
+
+
+/* ==========================================
+   SEND BUTTON
+========================================== */
+
+.renuga-message-submit {
+    width: 100%;
+
+    height: 35px;
+
+    margin-top: 14px;
+
+    border: none;
+
+    border-radius: 4px;
+
+    background: #087cf0;
+
+    color: #ffffff;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+.renuga-message-submit:hover {
+    background: #0568ce;
+
+    transform: translateY(-1px);
+}
+
+
+/* ==========================================
+   TOP FLOATING IMAGE
+========================================== */
+
+.renuga-message-float-top {
+    position: absolute;
+
+    left: 21%;
+
+    top: 75px;
+
+    width: 40px;
+    height: 40px;
+
+    background: #ffffff;
+
+    border-radius: 8px;
+
+    padding: 8px;
+
+    box-shadow: 0 5px 18px rgba(50, 90, 140, 0.15);
+
+    transform: rotate(-8deg);
+
+    z-index: 2;
+}
+
+
+.renuga-message-top-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    transform: rotate(8deg);
+}
+
+
+/* ==========================================
+   LEFT FLOATING IMAGE
+========================================== */
+
+.renuga-message-float-left {
+    position: absolute;
+
+    left: 11%;
+
+    bottom: 38px;
+
+    width: 42px;
+    height: 42px;
+
+    background: #ffffff;
+
+    border-radius: 8px;
+
+    padding: 8px;
+
+    box-shadow: 0 5px 18px rgba(50, 90, 140, 0.15);
+
+    transform: rotate(-12deg);
+
+    z-index: 2;
+}
+
+
+.renuga-message-left-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    transform: rotate(12deg);
+}
+
+
+/* ==========================================
+   RIGHT FLOATING IMAGE
+========================================== */
+
+.renuga-message-float-right {
+    position: absolute;
+
+    right: 9%;
+
+    top: 142px;
+
+    width: 42px;
+    height: 42px;
+
+    background: #ffffff;
+
+    border-radius: 8px;
+
+    padding: 8px;
+
+    box-shadow: 0 5px 18px rgba(50, 90, 140, 0.15);
+
+    transform: rotate(10deg);
+
+    z-index: 2;
+}
+
+
+.renuga-message-right-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    transform: rotate(-10deg);
+}
+
+
+/* ==========================================
+   TABLET RESPONSIVE
+========================================== */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .renuga-message-area {
+        min-height: 390px;
+    }
+
+    .renuga-message-container {
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+
+    .renuga-message-heading h2 {
+        font-size: 21px;
+    }
+
+    .renuga-message-input {
+        height: 34px;
+
+        font-size: 9px;
+    }
+
+    .renuga-message-textarea {
+        height: 90px;
+
+        font-size: 9px;
+    }
+
+    .renuga-message-submit {
+        height: 42px;
+
+        font-size: 11px;
+    }
+
+    .renuga-message-float-top {
+        left: 13%;
+    }
+
+    .renuga-message-float-left {
+        left: 7%;
+    }
+
+    .renuga-message-float-right {
+        right: 6%;
+    }
+}
+
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 767px) {
+
+    .renuga-message-area {
+        min-height: auto;
+
+        padding: 35px 0;
+    }
+
+
+    /* Hide large decorative shapes slightly */
+    .renuga-message-left-shape {
+        left: -150px;
+        top: 30px;
+
+        width: 250px;
+        height: 250px;
+    }
+
+
+    .renuga-message-right-shape {
+        right: -150px;
+        bottom: 20px;
+        top: auto;
+
+        width: 250px;
+        height: 250px;
+    }
+
+
+    .renuga-message-container {
+        padding: 0 25px;
+    }
+
+
+    .renuga-message-heading {
+        margin-bottom: 22px;
+    }
+
+
+    .renuga-message-heading h2 {
+        font-size: 21px;
+
+        line-height: 1.3;
+    }
+
+
+    /* Stack inputs */
+    .renuga-message-input {
+        height: 40px;
+
+        font-size: 10px;
+
+        padding: 7px 12px;
+    }
+
+
+    .renuga-message-field {
+        margin-top: 10px;
+    }
+
+
+    .renuga-message-textarea {
+        height: 110px;
+
+        font-size: 10px;
+
+        padding: 10px 12px;
+    }
+
+
+    .renuga-message-submit {
+        height: 44px;
+
+        margin-top: 14px;
+
+        font-size: 12px;
+    }
+
+
+    .renuga-message-float-left {
+        left: 4%;
+
+        bottom: 40px;
+
+        width: 38px;
+        height: 38px;
+
+        padding: 7px;
+    }
+
+
+    .renuga-message-float-right {
+        right: 4%;
+
+        top: 205px;
+
+        width: 38px;
+        height: 38px;
+
+        padding: 7px;
+    }
+}
+
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 400px) {
+
+    .renuga-message-area {
+        padding: 30px 0;
+    }
+
+    .renuga-message-container {
+        padding: 0 20px;
+    }
+
+    .renuga-message-heading h2 {
+        font-size: 18px;
+    }
+
+    .renuga-message-input {
+        height: 38px;
+
+        font-size: 9px;
+    }
+
+    .renuga-message-textarea {
+        height: 100px;
+
+        font-size: 9px;
+    }
+
+    .renuga-message-submit {
+        height: 42px;
+
+        font-size: 11px;
+    }
+
+    .renuga-message-float-top {
+        left: 3%;
+
+        width: 32px;
+        height: 32px;
+    }
+
+    .renuga-message-float-left {
+        left: 3%;
+
+        width: 34px;
+        height: 34px;
+    }
+
+    .renuga-message-float-right {
+        right: 3%;
+
+        width: 34px;
+        height: 34px;
+    }
+}
+/* ==========================================
+   MAP SECTION
+========================================== */
+
+.renuga-map-section {
+    width: 100%;
+
+    background: #ffffff;
+
+    padding: 15px 0 20px;
+}
+
+
+/* ==========================================
+   MAP OUTER WRAPPER
+========================================== */
+
+.renuga-map-wrapper {
+    width: 100%;
+
+    overflow: hidden;
+
+    border-radius: 5px;
+
+    line-height: 0;
+}
+
+
+/* ==========================================
+   MAP IMAGE
+========================================== */
+
+.renuga-map-picture {
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    max-width: 100%;
+
+    object-fit: cover;
+
+    border-radius: 5px;
+}
+
+
+/* ==========================================
+   TABLET RESPONSIVE
+========================================== */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .renuga-map-section {
+        padding: 25px 0;
+    }
+
+    .renuga-map-wrapper {
+        border-radius: 6px;
+    }
+
+    .renuga-map-picture {
+        width: 100%;
+
+        height: 300px;
+
+        object-fit: cover;
+    }
+}
+
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 767px) {
+
+    .renuga-map-section {
+        padding: 20px 15px;
+    }
+
+    .renuga-map-wrapper {
+        width: 100%;
+
+        border-radius: 6px;
+    }
+
+    .renuga-map-picture {
+        width: 100%;
+
+        height: 240px;
+
+        object-fit: cover;
+
+        object-position: center;
+    }
+}
+
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 400px) {
+
+    .renuga-map-section {
+        padding: 15px 10px;
+    }
+
+    .renuga-map-picture {
+        height: 210px;
+    }
+}
+
+
+/* ==========================================
+   LARGE SCREEN
+========================================== */
+
+@media (min-width: 1200px) {
+
+    .renuga-map-picture {
+        width: 100%;
+
+        height: auto;
+    }
+}
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        .footer {
+            background-color: #07356d;
+            color: white;
+            border: 2px solid #00a9ff;
+            padding: 40px 0 25px;
+        }
+
+        /* Brand */
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .logo-box {
+            width: 20px;
+            height: 20px;
+            background-color: #00d9ff;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .brand-name {
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        /* Description */
+        .footer-description {
+            color: #d5e1ef;
+            font-size: 9px;
+            line-height: 1.8;
+            max-width: 300px;
+            margin-bottom: 25px;
+        }
+
+        /* Headings */
+        .footer-heading {
+            font-size: 11px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        /* Links */
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 13px;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: #d5e1ef;
+            font-size: 9px;
+            transition: 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #00d9ff;
+        }
+
+        /* Contact */
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            color: #d5e1ef;
+            font-size: 9px;
+            margin-bottom: 14px;
+        }
+
+        .contact-item i {
+            color: white;
+            font-size: 11px;
+            min-width: 12px;
+        }
+
+        /* Social Icons */
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 12px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #00d9ff;
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 991px) {
+
+            .footer {
+                padding: 35px 20px 25px;
+            }
+
+            .footer-description {
+                max-width: 400px;
+            }
+
+            .footer-column {
+                margin-bottom: 30px;
+            }
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 576px) {
+
+            .footer {
+                padding: 30px 20px 20px;
+            }
+
+            .footer-logo {
+                margin-bottom: 15px;
+            }
+
+            .footer-description {
+                font-size: 10px;
+                max-width: 100%;
+                line-height: 1.7;
+            }
+
+            .footer-heading {
+                font-size: 13px;
+                margin-bottom: 15px;
+            }
+
+            .footer-links a {
+                font-size: 10px;
+            }
+
+            .contact-item {
+                font-size: 10px;
+            }
+
+            .social-icons {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg custom-navbar">
+
+        <div class="container-fluid">
+
+            <!-- Logo -->
+            <a href="#" class="logo">
+                Logo
+            </a>
+
+            <!-- Mobile Toggle Button -->
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu"
+                aria-controls="navbarMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menu -->
+            <div class="collapse navbar-collapse" id="navbarMenu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact us</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+     <!-- Contact Banner -->
+    <section class="renuga-contact-banner">
+
+        <!-- Dark Blue Overlay -->
+        <div class="renuga-contact-overlay"></div>
+
+        <div class="container h-100">
+
+            <div class="row h-100 justify-content-center align-items-center">
+
+                <div class="col-12 text-center">
+
+                    <!-- Contact Heading -->
+                    <h1 class="renuga-contact-heading">
+                        Contact us
+                    </h1>
+
+                    <!-- Breadcrumb -->
+                    <p class="renuga-contact-breadcrumb">
+                        <span class="renuga-contact-home">
+                            Home
+                        </span>
+
+                        <span class="renuga-contact-separator">
+                            /
+                        </span>
+
+                        <span class="renuga-contact-page">
+                            Contact us
+                        </span>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+<!-- Contact Information Section -->
+    <section class="renuga-contact-details">
+
+        <div class="container">
+
+            <!-- Heading -->
+            <div class="renuga-contact-title-area">
+
+                <h2 class="renuga-contact-main-title">
+                    Contact Information
+                </h2>
+
+                <p class="renuga-contact-sub-title">
+                    We're here 24/7 to assist you with anything you need.
+                </p>
+
+            </div>
+
+
+            <!-- Contact Cards -->
+            <div class="row g-2 justify-content-center">
+
+
+                <!-- Phone -->
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+
+                    <div class="renuga-phone-contact-card">
+
+                        <i class="fa-solid fa-phone-volume renuga-phone-icon"></i>
+
+                        <p class="renuga-phone-text">
+                            97913 67638
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Email -->
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+
+                    <div class="renuga-email-contact-card">
+
+                        <i class="fa-solid fa-envelope renuga-email-icon"></i>
+
+                        <p class="renuga-email-text">
+                            demo@gmail.com
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Location -->
+                <div class="col-lg-5 col-md-4 col-sm-12 col-12">
+
+                    <div class="renuga-address-contact-card">
+
+                        <i class="fa-solid fa-location-dot renuga-address-icon"></i>
+
+                        <p class="renuga-address-text">
+                            2715 Ash Dr, San Jose, South Dakota 83475
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+<!-- Contact Form Section -->
+    <section class="renuga-message-area">
+
+        <!-- Background Shapes -->
+        <div class="renuga-message-left-shape"></div>
+        <div class="renuga-message-right-shape"></div>
+
+
+      
+        
+
+
+        <div class="container renuga-message-container">
+
+            <div class="row justify-content-center">
+
+                <div class="col-lg-6 col-md-8 col-sm-10 col-12">
+
+                    <!-- Heading -->
+                    <div class="renuga-message-heading">
+
+                        <h2>
+                            Your comfort starts with great
+                            <br>
+                            support — get in touch.
+                        </h2>
+
+                    </div>
+
+
+                    <!-- Contact Form -->
+                    <form class="renuga-message-form">
+
+
+                        <!-- Name Row -->
+                        <div class="row g-2">
+
+                            <div class="col-md-6 col-12">
+
+                                <input
+                                    type="text"
+                                    class="form-control renuga-message-input"
+                                    placeholder="Full Name">
+
+                            </div>
+
+
+                            <div class="col-md-6 col-12">
+
+                                <input
+                                    type="email"
+                                    class="form-control renuga-message-input"
+                                    placeholder="Email Name">
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Phone Number -->
+                        <div class="renuga-message-field">
+
+                            <input
+                                type="tel"
+                                class="form-control renuga-message-input"
+                                placeholder="Phone Number">
+
+                        </div>
+
+
+                        <!-- Message -->
+                        <div class="renuga-message-field">
+
+                            <textarea
+                                class="form-control renuga-message-textarea"
+                                placeholder="Additional Message"></textarea>
+
+                        </div>
+
+
+                        <!-- Submit Button -->
+                        <button
+                            type="submit"
+                            class="renuga-message-submit">
+
+                            Send Now
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Map Section -->
+    <section class="renuga-map-section">
+
+        <div class="container">
+
+            <div class="renuga-map-wrapper">
+
+                <img
+                    src="projectim/6bc9543646ca61a08453f92a0b8854b041693f1d.png"
+                    alt="Our Location Map"
+                    class="renuga-map-picture">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+         FOOTER START
+    ========================= -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="row">
+
+                <!-- =====================
+                     COLUMN 1
+                ====================== -->
+
+                <div class="col-lg-5 col-md-6 footer-column">
+
+                    <!-- Logo -->
+                    <div class="footer-logo">
+
+                        <div class="logo-box">
+                            M
+                        </div>
+
+                        <span class="brand-name">
+                            mangcoding
+                        </span>
+
+                    </div>
+
+
+                    <!-- Description -->
+                    <p class="footer-description">
+
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Pellentesque habitant morbi tristique senectus et netus.
+                        Bell sagittis, volutpat neque sed, commodo nunc.
+                        Donec vitae libero at sapien viverra placerat.
+
+                    </p>
+
+
+                    <!-- Social Media -->
+                    <div class="social-icons">
+
+                        <a href="#">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =====================
+                     COLUMN 2 - PAGES
+                ====================== -->
+
+                <div class="col-lg-2 col-md-2 col-6 footer-column">
+
+                    <h5 class="footer-heading">
+                        Pages
+                    </h5>
+
+                    <ul class="footer-links">
+
+                        <li>
+                            <a href="#">Home it work</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Pricing</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Blog</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Demo</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- =====================
+                     COLUMN 3 - SERVICE
+                ====================== -->
+
+                <div class="col-lg-2 col-md-2 col-6 footer-column">
+
+                    <h5 class="footer-heading">
+                        Service
+                    </h5>
+
+                    <ul class="footer-links">
+
+                        <li>
+                            <a href="#">Shopify</a>
+                        </li>
+
+                        <li>
+                            <a href="#">WordPress</a>
+                        </li>
+
+                        <li>
+                            <a href="#">UI/UX Design</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- =====================
+                     COLUMN 4 - CONTACT
+                ====================== -->
+
+                <div class="col-lg-3 col-md-6 footer-column">
+
+                    <h5 class="footer-heading">
+                        Contact
+                    </h5>
+
+
+                    <!-- Phone -->
+                    <div class="contact-item">
+
+                        <i class="bi bi-telephone-fill"></i>
+
+                        <span>
+                            (406) 555-0120
+                        </span>
+
+                    </div>
+
+
+                    <!-- Email -->
+                    <div class="contact-item">
+
+                        <i class="bi bi-envelope-fill"></i>
+
+                        <span>
+                            mangcoding123@gmail.com
+                        </span>
+
+                    </div>
+
+
+                    <!-- Location -->
+                    <div class="contact-item">
+
+                        <i class="bi bi-geo-alt-fill"></i>
+
+                        <span>
+                            2972 Westheimer Rd. Santa Ana,
+                            Illinois 85486
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

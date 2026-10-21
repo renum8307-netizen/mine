@@ -1,0 +1,1674 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gallery</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Gallery Banner CSS -->
+    <link rel="stylesheet" href="gallery-banner-style.css">
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar */
+        .custom-navbar {
+            background-color: #0878f9;
+            min-height: 42px;
+            border: 2px solid #00aaff;
+        }
+
+        /* Logo */
+        .logo {
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        /* Navigation Links */
+        .navbar-nav .nav-link {
+            color: white !important;
+            font-size: 11px;
+            margin-left: 20px;
+            transition: 0.3s;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #d9d9d9 !important;
+        }
+
+        /* Mobile menu button */
+        .navbar-toggler {
+            border: 1px solid white;
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+
+        .navbar-toggler-icon {
+            filter: brightness(0) invert(1);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 991px) {
+
+            .custom-navbar {
+                padding: 8px 15px;
+            }
+
+            .navbar-nav {
+                margin-top: 10px;
+            }
+
+            .navbar-nav .nav-link {
+                margin-left: 0;
+                padding: 8px 0;
+                font-size: 14px;
+            }
+        }
+        /* ==========================================
+   GALLERY BANNER
+========================================== */
+
+.renuga-gallery-banner {
+    position: relative;
+
+    width: 100%;
+
+    height: 108px;
+
+    background-image: url("projectim/7538e65066f77ad13f36fd70a871d661c754ceaa.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+}
+
+
+/* ==========================================
+   BLUE OVERLAY
+========================================== */
+
+.renuga-gallery-overlay {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(3, 42, 94, 0.88);
+
+    z-index: 1;
+}
+
+
+/* ==========================================
+   CONTENT LAYER
+========================================== */
+
+.renuga-gallery-banner .container {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* ==========================================
+   GALLERY TITLE
+========================================== */
+
+.renuga-gallery-title {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 21px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+
+/* ==========================================
+   BREADCRUMB
+========================================== */
+
+.renuga-gallery-breadcrumb {
+    margin: 5px 0 0;
+
+    color: #ffffff;
+
+    font-size: 7px;
+
+    font-weight: 400;
+
+    line-height: 1.4;
+}
+
+
+/* ==========================================
+   HOME TEXT
+========================================== */
+
+.renuga-gallery-home {
+    color: #ffffff;
+}
+
+
+/* ==========================================
+   DIVIDER
+========================================== */
+
+.renuga-gallery-divider {
+    margin: 0 4px;
+
+    color: #ffffff;
+}
+
+
+/* ==========================================
+   CURRENT PAGE
+========================================== */
+
+.renuga-gallery-current {
+    color: #ffffff;
+}
+
+
+/* ==========================================
+   TABLET RESPONSIVE
+========================================== */
+
+@media (min-width: 576px) and (max-width: 991px) {
+
+    .renuga-gallery-banner {
+        height: 150px;
+
+        background-position: center;
+    }
+
+    .renuga-gallery-title {
+        font-size: 28px;
+    }
+
+    .renuga-gallery-breadcrumb {
+        margin-top: 7px;
+
+        font-size: 9px;
+    }
+}
+
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 575px) {
+
+    .renuga-gallery-banner {
+        height: 135px;
+
+        background-position: center;
+    }
+
+    .renuga-gallery-title {
+        font-size: 25px;
+    }
+
+    .renuga-gallery-breadcrumb {
+        margin-top: 6px;
+
+        font-size: 9px;
+    }
+}
+
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 400px) {
+
+    .renuga-gallery-banner {
+        height: 120px;
+    }
+
+    .renuga-gallery-title {
+        font-size: 22px;
+    }
+
+    .renuga-gallery-breadcrumb {
+        font-size: 8px;
+    }
+}
+
+
+/* ==========================================
+   LARGE DESKTOP
+========================================== */
+
+@media (min-width: 1200px) {
+
+    .renuga-gallery-banner {
+        height: 180px;
+    }
+
+    .renuga-gallery-title {
+        font-size: 32px;
+    }
+
+    .renuga-gallery-breadcrumb {
+        font-size: 10px;
+    }
+}
+/* ==========================================
+   GALLERY MAIN SECTION
+========================================== */
+
+.renuga-photo-showcase {
+    width: 100%;
+
+    background: #ffffff;
+
+    padding: 20px 0;
+}
+
+
+/* ==========================================
+   GALLERY LAYOUT
+========================================== */
+
+.renuga-photo-layout {
+
+    width: 100%;
+
+    max-width: 680px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr
+        1fr
+        1fr;
+
+    grid-template-rows:
+        145px
+        145px
+        145px
+        145px;
+
+    gap: 8px;
+}
+
+
+/* ==========================================
+   COMMON IMAGE BOX
+========================================== */
+
+.renuga-photo-item {
+
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    border-radius: 11px;
+
+    background: #eeeeee;
+}
+
+
+/* ==========================================
+   ALL IMAGES
+========================================== */
+
+.renuga-photo-image {
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+
+/* ==========================================
+   IMAGE HOVER
+========================================== */
+
+.renuga-photo-item:hover
+.renuga-photo-image {
+
+    transform: scale(1.04);
+}
+
+
+/* ==========================================
+   LARGE LEFT IMAGE
+========================================== */
+
+.renuga-photo-large-left {
+
+    grid-column: 1 / 3;
+
+    grid-row: 1 / 3;
+}
+
+
+/* ==========================================
+   TOP MIDDLE IMAGE
+========================================== */
+
+.renuga-photo-top-middle {
+
+    grid-column: 3;
+
+    grid-row: 1;
+}
+
+
+/* ==========================================
+   TOP RIGHT IMAGE
+========================================== */
+
+.renuga-photo-top-right {
+
+    grid-column: 4;
+
+    grid-row: 1;
+}
+
+
+/* ==========================================
+   MIDDLE WIDE IMAGE
+========================================== */
+
+.renuga-photo-middle-wide {
+
+    grid-column: 3 / 5;
+
+    grid-row: 2;
+}
+
+
+/* ==========================================
+   BOTTOM SMALL IMAGE ONE
+========================================== */
+
+.renuga-photo-bottom-small-one {
+
+    grid-column: 1;
+
+    grid-row: 3;
+}
+
+
+/* ==========================================
+   BOTTOM SMALL IMAGE TWO
+========================================== */
+
+.renuga-photo-bottom-small-two {
+
+    grid-column: 2;
+
+    grid-row: 3;
+}
+
+
+/* ==========================================
+   BOTTOM WIDE IMAGE
+========================================== */
+
+.renuga-photo-bottom-wide {
+
+    grid-column: 1 / 3;
+
+    grid-row: 4;
+}
+
+
+/* ==========================================
+   LARGE RIGHT IMAGE
+========================================== */
+
+.renuga-photo-large-right {
+
+    grid-column: 3 / 5;
+
+    grid-row: 3 / 5;
+}
+
+
+/* ==========================================
+   TABLET RESPONSIVE
+========================================== */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .renuga-photo-showcase {
+
+        padding: 30px 20px;
+    }
+
+
+    .renuga-photo-layout {
+
+        max-width: 720px;
+
+        grid-template-rows:
+            150px
+            150px
+            150px
+            150px;
+
+        gap: 9px;
+    }
+
+
+    .renuga-photo-item {
+
+        border-radius: 10px;
+    }
+}
+
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 767px) {
+
+    .renuga-photo-showcase {
+
+        padding: 25px 15px;
+    }
+
+
+    .renuga-photo-layout {
+
+        width: 100%;
+
+        max-width: 100%;
+
+        display: grid;
+
+        grid-template-columns:
+            1fr
+            1fr;
+
+        grid-template-rows:
+            210px
+            120px
+            120px
+            210px
+            120px;
+
+        gap: 7px;
+    }
+
+
+    /* Large first image */
+    .renuga-photo-large-left {
+
+        grid-column: 1 / 3;
+
+        grid-row: 1;
+    }
+
+
+    /* Top two images */
+    .renuga-photo-top-middle {
+
+        grid-column: 1;
+
+        grid-row: 2;
+    }
+
+
+    .renuga-photo-top-right {
+
+        grid-column: 2;
+
+        grid-row: 2;
+    }
+
+
+    /* Middle wide */
+    .renuga-photo-middle-wide {
+
+        grid-column: 1 / 3;
+
+        grid-row: 3;
+    }
+
+
+    /* Bottom two images */
+    .renuga-photo-bottom-small-one {
+
+        grid-column: 1;
+
+        grid-row: 4;
+    }
+
+
+    .renuga-photo-bottom-small-two {
+
+        grid-column: 2;
+
+        grid-row: 4;
+    }
+
+
+    /* Bottom wide */
+    .renuga-photo-bottom-wide {
+
+        grid-column: 1 / 3;
+
+        grid-row: 5;
+    }
+
+
+    /* Large right image becomes normal */
+    .renuga-photo-large-right {
+
+        grid-column: 1 / 3;
+
+        grid-row: 6;
+
+        height: 210px;
+    }
+
+
+    .renuga-photo-item {
+
+        border-radius: 9px;
+    }
+}
+
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 400px) {
+
+    .renuga-photo-showcase {
+
+        padding: 20px 10px;
+    }
+
+
+    .renuga-photo-layout {
+
+        grid-template-rows:
+            180px
+            105px
+            105px
+            180px
+            105px;
+
+        gap: 6px;
+    }
+
+
+    .renuga-photo-large-right {
+
+        height: 180px;
+    }
+
+
+    .renuga-photo-item {
+
+        border-radius: 8px;
+    }
+}
+
+
+/* ==========================================
+   LARGE DESKTOP
+========================================== */
+
+@media (min-width: 1200px) {
+
+    .renuga-photo-layout {
+
+        max-width: 680px;
+
+        grid-template-rows:
+            145px
+            145px
+            145px
+            145px;
+    }
+}
+/* ==========================================
+   BOOKING PROMO SECTION
+========================================== */
+
+.renuga-stay-promo {
+    width: 100%;
+
+    background: #ffffff;
+
+    padding: 15px 0 20px;
+}
+
+
+/* ==========================================
+   MAIN BLUE BOX
+========================================== */
+
+.renuga-stay-promo-box {
+    position: relative;
+
+    width: 100%;
+
+    height: 203px;
+
+    overflow: hidden;
+
+    border-radius: 11px;
+
+    background: linear-gradient(
+        115deg,
+        #0b4b9b 0%,
+        #075cc2 55%,
+        #096bd5 100%
+    );
+}
+
+
+/* ==========================================
+   TEXT CONTENT
+========================================== */
+
+.renuga-stay-content {
+    position: relative;
+
+    z-index: 3;
+
+    padding-left: 25px;
+
+    padding-top: 2px;
+}
+
+
+/* ==========================================
+   HEADING
+========================================== */
+
+.renuga-stay-heading {
+    margin: 0 0 6px;
+
+    color: #ffffff;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+
+/* ==========================================
+   DESCRIPTION
+========================================== */
+
+.renuga-stay-description {
+    margin: 0 0 17px;
+
+    color: #ffffff;
+
+    font-size: 9px;
+
+    font-weight: 400;
+
+    line-height: 1.35;
+}
+
+
+/* ==========================================
+   BOOK NOW BUTTON
+========================================== */
+
+.renuga-stay-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 103px;
+
+    height: 28px;
+
+    background: #ffffff;
+
+    color: #0064d5;
+
+    border-radius: 5px;
+
+    text-decoration: none;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+
+.renuga-stay-button:hover {
+    background: #f1f6ff;
+
+    color: #004b9f;
+
+    transform: translateY(-2px);
+}
+
+
+/* ==========================================
+   PERSON IMAGE AREA
+========================================== */
+
+.renuga-stay-person-area {
+    position: relative;
+
+    width: 100%;
+
+    height: 203px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-end;
+
+    z-index: 2;
+}
+
+
+/* ==========================================
+   PERSON IMAGE
+========================================== */
+
+.renuga-stay-person-image {
+    position: absolute;
+
+    right: 25px;
+
+    bottom: 0;
+
+    width: 185px;
+
+    height: 195px;
+
+    object-fit: contain;
+
+    object-position: bottom center;
+}
+
+
+/* ==========================================
+   TABLET RESPONSIVE
+========================================== */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .renuga-stay-promo {
+        padding: 25px 15px;
+    }
+
+    .renuga-stay-promo-box {
+        height: 230px;
+    }
+
+    .renuga-stay-content {
+        padding-left: 25px;
+    }
+
+    .renuga-stay-heading {
+        font-size: 19px;
+    }
+
+    .renuga-stay-description {
+        font-size: 10px;
+
+        margin-bottom: 20px;
+    }
+
+    .renuga-stay-button {
+        width: 115px;
+
+        height: 34px;
+
+        font-size: 10px;
+    }
+
+    .renuga-stay-person-area {
+        height: 230px;
+    }
+
+    .renuga-stay-person-image {
+        right: 15px;
+
+        width: 215px;
+
+        height: 225px;
+    }
+}
+
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 767px) {
+
+    .renuga-stay-promo {
+        padding: 20px 15px;
+    }
+
+    .renuga-stay-promo-box {
+        height: auto;
+
+        min-height: 430px;
+
+        border-radius: 10px;
+    }
+
+
+    /* Text area */
+    .renuga-stay-content {
+        padding: 30px 25px 0;
+
+        text-align: center;
+    }
+
+
+    .renuga-stay-heading {
+        font-size: 21px;
+
+        line-height: 1.25;
+    }
+
+
+    .renuga-stay-description {
+        font-size: 11px;
+
+        line-height: 1.4;
+
+        margin-bottom: 18px;
+    }
+
+
+    /* Remove desktop line breaks */
+    .renuga-stay-desktop-break {
+        display: none;
+    }
+
+
+    .renuga-stay-button {
+        width: 115px;
+
+        height: 36px;
+
+        font-size: 11px;
+    }
+
+
+    /* Person area */
+    .renuga-stay-person-area {
+        height: 230px;
+
+        margin-top: 5px;
+    }
+
+
+    .renuga-stay-person-image {
+        right: 50%;
+
+        transform: translateX(50%);
+
+        width: 205px;
+
+        height: 225px;
+    }
+}
+
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 400px) {
+
+    .renuga-stay-promo {
+        padding: 15px 10px;
+    }
+
+    .renuga-stay-promo-box {
+        min-height: 405px;
+    }
+
+    .renuga-stay-content {
+        padding: 25px 18px 0;
+    }
+
+    .renuga-stay-heading {
+        font-size: 18px;
+    }
+
+    .renuga-stay-description {
+        font-size: 10px;
+    }
+
+    .renuga-stay-button {
+        width: 105px;
+
+        height: 33px;
+
+        font-size: 10px;
+    }
+
+    .renuga-stay-person-area {
+        height: 215px;
+    }
+
+    .renuga-stay-person-image {
+        width: 190px;
+
+        height: 210px;
+    }
+}
+
+
+/* ==========================================
+   LARGE DESKTOP
+========================================== */
+
+@media (min-width: 1200px) {
+
+    .renuga-stay-promo-box {
+        height: 203px;
+    }
+
+    .renuga-stay-heading {
+        font-size: 17px;
+    }
+
+    .renuga-stay-description {
+        font-size: 9px;
+    }
+
+    .renuga-stay-person-image {
+        width: 190px;
+
+        height: 200px;
+    }
+}
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        .footer {
+            background-color: #07356d;
+            color: white;
+            border: 2px solid #00a9ff;
+            padding: 40px 0 25px;
+        }
+
+        /* Brand */
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .logo-box {
+            width: 20px;
+            height: 20px;
+            background-color: #00d9ff;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .brand-name {
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        /* Description */
+        .footer-description {
+            color: #d5e1ef;
+            font-size: 9px;
+            line-height: 1.8;
+            max-width: 300px;
+            margin-bottom: 25px;
+        }
+
+        /* Headings */
+        .footer-heading {
+            font-size: 11px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        /* Links */
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 13px;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: #d5e1ef;
+            font-size: 9px;
+            transition: 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #00d9ff;
+        }
+
+        /* Contact */
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            color: #d5e1ef;
+            font-size: 9px;
+            margin-bottom: 14px;
+        }
+
+        .contact-item i {
+            color: white;
+            font-size: 11px;
+            min-width: 12px;
+        }
+
+        /* Social Icons */
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 12px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #00d9ff;
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 991px) {
+
+            .footer {
+                padding: 35px 20px 25px;
+            }
+
+            .footer-description {
+                max-width: 400px;
+            }
+
+            .footer-column {
+                margin-bottom: 30px;
+            }
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 576px) {
+
+            .footer {
+                padding: 30px 20px 20px;
+            }
+
+            .footer-logo {
+                margin-bottom: 15px;
+            }
+
+            .footer-description {
+                font-size: 10px;
+                max-width: 100%;
+                line-height: 1.7;
+            }
+
+            .footer-heading {
+                font-size: 13px;
+                margin-bottom: 15px;
+            }
+
+            .footer-links a {
+                font-size: 10px;
+            }
+
+            .contact-item {
+                font-size: 10px;
+            }
+
+            .social-icons {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg custom-navbar">
+
+        <div class="container-fluid">
+
+            <!-- Logo -->
+            <a href="#" class="logo">
+                Logo
+            </a>
+
+            <!-- Mobile Toggle Button -->
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu"
+                aria-controls="navbarMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menu -->
+            <div class="collapse navbar-collapse" id="navbarMenu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact us</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Gallery Banner -->
+    <section class="renuga-gallery-banner">
+
+        <!-- Blue Overlay -->
+        <div class="renuga-gallery-overlay"></div>
+
+        <div class="container h-100">
+
+            <div class="row h-100 align-items-center justify-content-center">
+
+                <div class="col-12 text-center">
+
+                    <!-- Page Title -->
+                    <h1 class="renuga-gallery-title">
+                        Gallery
+                    </h1>
+
+                    <!-- Breadcrumb -->
+                    <p class="renuga-gallery-breadcrumb">
+                        <span class="renuga-gallery-home">
+                            Home
+                        </span>
+
+                        <span class="renuga-gallery-divider">
+                            /
+                        </span>
+
+                        <span class="renuga-gallery-current">
+                            Gallery
+                        </span>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+  
+    <!-- Gallery Section -->
+    <section class="renuga-photo-showcase">
+
+        <div class="container">
+
+            <div class="renuga-photo-layout">
+
+
+                <!-- =================================
+                     LARGE LEFT IMAGE
+                ================================== -->
+
+                <div class="renuga-photo-item renuga-photo-large-left">
+
+                    <img
+                        src="projectim/54d488eeda5eb0aba86433d501a8e58a624acec2.jpg"
+                        alt="Luxury bedroom"
+                        class="renuga-photo-image">
+
+                </div>
+
+
+                <!-- =================================
+                     TOP MIDDLE IMAGE
+                ================================== -->
+
+                <div class="renuga-photo-item renuga-photo-top-middle">
+
+                    <img
+                        src="projectim/f3792d6b571ab86433210da0ca9c2512a82c38f9.jpg"
+                        alt="Modern bedroom"
+                        class="renuga-photo-image">
+
+                </div>
+
+
+                <!-- =================================
+                     TOP RIGHT IMAGE
+                ================================== -->
+
+                <div class="renuga-photo-item renuga-photo-top-right">
+
+                    <img
+                        src="projectim/0e1600f71a506ed78457e1dcbfa5f806f416c43a.jpg"
+                        alt="Luxury hotel room"
+                        class="renuga-photo-image">
+
+                </div>
+
+
+                <!-- =================================
+                     MIDDLE RIGHT WIDE IMAGE
+                ================================== -->
+
+                <div class="renuga-photo-item renuga-photo-middle-wide">
+
+                    <img
+                        src="projectim/181fb13208fd1082b702828cb01a76c9c5dac79b.jpg"
+                        alt="Premium bedroom"
+                        class="renuga-photo-image">
+
+                </div>
+
+
+                <!-- =================================
+                     BOTTOM LEFT SMALL IMAGE
+                ================================== -->
+
+                <div class="renuga-photo-item renuga-photo-bottom-small-one">
+
+                    <img
+                        src="projectim/0e1600f71a506ed78457e1dcbfa5f806f416c43a.jpg"
+                        alt="Hotel room"
+                        class="renuga-photo-image">
+
+                </div>
+
+
+                <!-- =================================
+                     BOTTOM LEFT SECOND IMAGE
+                ================================== -->
+
+                <div class="renuga-photo-item renuga-photo-bottom-small-two">
+
+                    <img
+                        src="projectim/f3792d6b571ab86433210da0ca9c2512a82c38f9.jpg"
+                        alt="Comfortable bedroom"
+                        class="renuga-photo-image">
+
+                </div>
+
+
+                <!-- =================================
+                     LOWER LEFT WIDE IMAGE
+                ================================== -->
+
+                <div class="renuga-photo-item renuga-photo-bottom-wide">
+
+                    <img
+                        src="projectim/181fb13208fd1082b702828cb01a76c9c5dac79b.jpg"
+                        alt="Modern hotel room"
+                        class="renuga-photo-image">
+
+                </div>
+
+
+                <!-- =================================
+                     LARGE RIGHT IMAGE
+                ================================== -->
+
+                <div class="renuga-photo-item renuga-photo-large-right">
+
+                    <img
+                        src="projectim/54d488eeda5eb0aba86433d501a8e58a624acec2.jpg"
+                        alt="Luxury room"
+                        class="renuga-photo-image">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+       <!-- Booking CTA Section -->
+    <section class="renuga-stay-promo">
+
+        <div class="container">
+
+            <div class="renuga-stay-promo-box">
+
+                <div class="row align-items-center h-100">
+
+                    <!-- Text Content -->
+                    <div class="col-lg-7 col-md-7 col-12">
+
+                        <div class="renuga-stay-content">
+
+                            <h2 class="renuga-stay-heading">
+                                Book Your Perfect Stay Anytime,
+                                <br class="renuga-stay-desktop-break">
+                                Anywhere!
+                            </h2>
+
+                            <p class="renuga-stay-description">
+                                From cozy budget rooms to luxury stays, find
+                                <br class="renuga-stay-desktop-break">
+                                verified spaces in just a few taps.
+                            </p>
+
+                            <a href="#" class="renuga-stay-button">
+                                Book Now
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Person Image -->
+                    <div class="col-lg-5 col-md-5 col-12">
+
+                        <div class="renuga-stay-person-area">
+
+                            <img
+                                src="projectim/61a2eb41d55419e972bfe384c18e2c20a6d60d5b.png"
+                                alt="Person booking a stay"
+                                class="renuga-stay-person-image">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    
+<!-- =========================
+         FOOTER START
+    ========================= -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="row">
+
+                <!-- =====================
+                     COLUMN 1
+                ====================== -->
+
+                <div class="col-lg-5 col-md-6 footer-column">
+
+                    <!-- Logo -->
+                    <div class="footer-logo">
+
+                        <div class="logo-box">
+                            M
+                        </div>
+
+                        <span class="brand-name">
+                            mangcoding
+                        </span>
+
+                    </div>
+
+
+                    <!-- Description -->
+                    <p class="footer-description">
+
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Pellentesque habitant morbi tristique senectus et netus.
+                        Bell sagittis, volutpat neque sed, commodo nunc.
+                        Donec vitae libero at sapien viverra placerat.
+
+                    </p>
+
+
+                    <!-- Social Media -->
+                    <div class="social-icons">
+
+                        <a href="#">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =====================
+                     COLUMN 2 - PAGES
+                ====================== -->
+
+                <div class="col-lg-2 col-md-2 col-6 footer-column">
+
+                    <h5 class="footer-heading">
+                        Pages
+                    </h5>
+
+                    <ul class="footer-links">
+
+                        <li>
+                            <a href="#">Home it work</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Pricing</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Blog</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Demo</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- =====================
+                     COLUMN 3 - SERVICE
+                ====================== -->
+
+                <div class="col-lg-2 col-md-2 col-6 footer-column">
+
+                    <h5 class="footer-heading">
+                        Service
+                    </h5>
+
+                    <ul class="footer-links">
+
+                        <li>
+                            <a href="#">Shopify</a>
+                        </li>
+
+                        <li>
+                            <a href="#">WordPress</a>
+                        </li>
+
+                        <li>
+                            <a href="#">UI/UX Design</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- =====================
+                     COLUMN 4 - CONTACT
+                ====================== -->
+
+                <div class="col-lg-3 col-md-6 footer-column">
+
+                    <h5 class="footer-heading">
+                        Contact
+                    </h5>
+
+
+                    <!-- Phone -->
+                    <div class="contact-item">
+
+                        <i class="bi bi-telephone-fill"></i>
+
+                        <span>
+                            (406) 555-0120
+                        </span>
+
+                    </div>
+
+
+                    <!-- Email -->
+                    <div class="contact-item">
+
+                        <i class="bi bi-envelope-fill"></i>
+
+                        <span>
+                            mangcoding123@gmail.com
+                        </span>
+
+                    </div>
+
+
+                    <!-- Location -->
+                    <div class="contact-item">
+
+                        <i class="bi bi-geo-alt-fill"></i>
+
+                        <span>
+                            2972 Westheimer Rd. Santa Ana,
+                            Illinois 85486
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+    <!-- Bootstrap JS -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+</body>
+
+</html>

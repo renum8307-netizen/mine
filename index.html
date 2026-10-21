@@ -1,0 +1,3485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hotel Booking</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+    <style>
+ body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar */
+        .custom-navbar {
+            background-color: #0878f9;
+            min-height: 42px;
+            border: 2px solid #00aaff;
+        }
+
+        /* Logo */
+        .logo {
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        /* Navigation Links */
+        .navbar-nav .nav-link {
+            color: white !important;
+            font-size: 11px;
+            margin-left: 20px;
+            transition: 0.3s;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #d9d9d9 !important;
+        }
+
+        /* Mobile menu button */
+        .navbar-toggler {
+            border: 1px solid white;
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+
+        .navbar-toggler-icon {
+            filter: brightness(0) invert(1);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 991px) {
+
+            .custom-navbar {
+                padding: 8px 15px;
+            }
+
+            .navbar-nav {
+                margin-top: 10px;
+            }
+
+            .navbar-nav .nav-link {
+                margin-left: 0;
+                padding: 8px 0;
+                font-size: 14px;
+            }
+        }
+        
+        /* =========================
+           FOOTER
+        ========================= */
+
+        .footer {
+            background-color: #07356d;
+            color: white;
+            border: 2px solid #00a9ff;
+            padding: 40px 0 25px;
+        }
+
+        /* Brand */
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .logo-box {
+            width: 20px;
+            height: 20px;
+            background-color: #00d9ff;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .brand-name {
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        /* Description */
+        .footer-description {
+            color: #d5e1ef;
+            font-size: 9px;
+            line-height: 1.8;
+            max-width: 300px;
+            margin-bottom: 25px;
+        }
+
+        /* Headings */
+        .footer-heading {
+            font-size: 11px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        /* Links */
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 13px;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: #d5e1ef;
+            font-size: 9px;
+            transition: 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #00d9ff;
+        }
+
+        /* Contact */
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            color: #d5e1ef;
+            font-size: 9px;
+            margin-bottom: 14px;
+        }
+
+        .contact-item i {
+            color: white;
+            font-size: 11px;
+            min-width: 12px;
+        }
+
+        /* Social Icons */
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 12px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #00d9ff;
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 991px) {
+
+            .footer {
+                padding: 35px 20px 25px;
+            }
+
+            .footer-description {
+                max-width: 400px;
+            }
+
+            .footer-column {
+                margin-bottom: 30px;
+            }
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 576px) {
+
+            .footer {
+                padding: 30px 20px 20px;
+            }
+
+            .footer-logo {
+                margin-bottom: 15px;
+            }
+
+            .footer-description {
+                font-size: 10px;
+                max-width: 100%;
+                line-height: 1.7;
+            }
+
+            .footer-heading {
+                font-size: 13px;
+                margin-bottom: 15px;
+            }
+
+            .footer-links a {
+                font-size: 10px;
+            }
+
+            .contact-item {
+                font-size: 10px;
+            }
+
+            .social-icons {
+                margin-bottom: 10px;
+            }
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            position: relative;
+            width: 100%;
+            min-height: 430px;
+
+            background-image:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.40),
+                    rgba(0, 0, 0, 0.40)
+                ),
+                url("projectim/113c0314608e6456a009d1c59bb9ba9659f912a2.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            border: 2px solid #00a9ff;
+
+            display: flex;
+            align-items: center;
+        }
+
+
+        /* =========================
+           HERO CONTENT
+        ========================= */
+
+        .hero-content {
+            margin-left: 8%;
+            margin-top: -40px;
+            color: white;
+        }
+
+        .hero-content h1 {
+            font-size: 38px;
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 12px;
+        }
+
+        .hero-content p {
+            font-size: 13px;
+            line-height: 1.5;
+            max-width: 320px;
+        }
+
+
+        /* =========================
+           BOOKING BOX
+        ========================= */
+
+        .booking-box {
+            position: absolute;
+
+            left: 50%;
+            bottom: -35px;
+
+            transform: translateX(-50%);
+
+            width: 60%;
+
+            background: white;
+
+            border-radius: 8px;
+
+            padding: 10px;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.20);
+
+            z-index: 10;
+        }
+
+
+        /* =========================
+           SEARCH ONLY
+        ========================= */
+
+        .search-only {
+            display: flex;
+            justify-content: center;
+        }
+
+
+        .search-btn {
+            width: 180px;
+            height: 40px;
+
+            border: none;
+            border-radius: 5px;
+
+            background: #0878f9;
+            color: white;
+
+            font-size: 12px;
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        .search-btn:hover {
+            background: #005dcc;
+        }
+
+
+        /* =========================
+           BOOKING FORM
+        ========================= */
+
+        #bookingForm {
+            display: none;
+        }
+
+        #bookingForm.show {
+            display: block;
+        }
+
+
+        .booking-item {
+            border-right: 1px solid #ddd;
+            padding: 5px 15px;
+        }
+
+        .booking-label {
+            display: block;
+
+            font-size: 8px;
+            color: #777;
+
+            margin-bottom: 4px;
+        }
+
+        .booking-input {
+            width: 100%;
+
+            border: none;
+            outline: none;
+
+            font-size: 10px;
+            color: #333;
+
+            background: transparent;
+        }
+
+        .booking-input::placeholder {
+            color: #333;
+        }
+
+
+        .booking-select {
+            width: 100%;
+
+            border: none;
+            outline: none;
+
+            font-size: 10px;
+
+            background: white;
+
+            color: #333;
+        }
+
+
+        /* Search Rooms Button */
+
+        .find-btn {
+            width: 100%;
+            height: 35px;
+
+            border: none;
+            border-radius: 5px;
+
+            background: #0878f9;
+            color: white;
+
+            font-size: 10px;
+            font-weight: bold;
+        }
+
+        .find-btn:hover {
+            background: #005dcc;
+        }
+
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 991px) {
+
+            .hero {
+                min-height: 400px;
+            }
+
+            .hero-content {
+                margin-left: 6%;
+            }
+
+            .hero-content h1 {
+                font-size: 32px;
+            }
+
+            .booking-box {
+                width: 85%;
+            }
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 767px) {
+
+            .hero {
+                min-height: 560px;
+            }
+
+            .hero-content {
+                margin: 0;
+                padding: 30px;
+
+                align-self: flex-start;
+                margin-top: 60px;
+            }
+
+            .hero-content h1 {
+                font-size: 29px;
+            }
+
+            .hero-content p {
+                font-size: 12px;
+            }
+
+            .booking-box {
+                width: 90%;
+                bottom: -45px;
+            }
+
+            .booking-item {
+                border-right: none;
+                border-bottom: 1px solid #ddd;
+
+                padding: 10px 5px;
+            }
+
+            .find-btn {
+                margin-top: 10px;
+                height: 40px;
+            }
+
+        }
+
+
+        /* =========================
+           SMALL MOBILE
+        ========================= */
+
+        @media (max-width: 480px) {
+
+            .hero {
+                min-height: 570px;
+            }
+
+            .hero-content {
+                padding: 25px;
+            }
+
+            .hero-content h1 {
+                font-size: 27px;
+            }
+
+            .booking-box {
+                width: 92%;
+            }
+
+            .search-btn {
+                width: 150px;
+            }
+        }
+/* =========================================
+           ABOUT SECTION
+        ========================================= */
+
+        .trusted-stay-section {
+            position: relative;
+
+            width: 100%;
+
+            padding: 70px 0;
+
+            background: #ffffff;
+
+            overflow: hidden;
+        }
+
+
+        /* =========================================
+           HEXAGON BACKGROUND
+        ========================================= */
+
+        .trusted-stay-shape {
+            position: absolute;
+
+            right: -40px;
+            top: 0;
+
+            width: 330px;
+            height: 330px;
+
+            background: #eef6ff;
+
+            clip-path: polygon(
+                50% 0%,
+                93% 25%,
+                93% 75%,
+                50% 100%,
+                7% 75%,
+                7% 25%
+            );
+
+            z-index: 0;
+        }
+
+
+        /* =========================================
+           IMAGE AREA
+        ========================================= */
+
+        .trusted-stay-images {
+            position: relative;
+
+            min-height: 330px;
+
+            width: 100%;
+        }
+
+
+        /* First Image */
+
+        .trusted-stay-photo-one {
+            position: absolute;
+
+            top: 0;
+            left: 10%;
+
+            width: 55%;
+            height: 195px;
+
+            object-fit: cover;
+
+            border-radius: 8px;
+
+            z-index: 2;
+
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+
+
+        /* Second Image */
+
+        .trusted-stay-photo-two {
+            position: absolute;
+
+            top: 95px;
+            right: 7%;
+
+            width: 48%;
+            height: 135px;
+
+            object-fit: cover;
+
+            border-radius: 8px;
+
+            z-index: 3;
+
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.10);
+        }
+
+
+        /* =========================================
+           TEXT AREA
+        ========================================= */
+
+        .trusted-stay-content {
+            position: relative;
+
+            z-index: 2;
+
+            padding: 20px 25px;
+        }
+
+
+        /* Small About Badge */
+
+        .trusted-stay-badge {
+            display: inline-block;
+
+            padding: 4px 8px;
+
+            margin-bottom: 10px;
+
+            border-radius: 20px;
+
+            background: #eef6ff;
+
+            color: #0878f9;
+
+            font-size: 8px;
+
+            font-weight: 600;
+
+            text-transform: uppercase;
+        }
+
+
+        /* Heading */
+
+        .trusted-stay-heading {
+            font-size: 23px;
+
+            font-weight: 700;
+
+            line-height: 1.2;
+
+            color: #111111;
+
+            margin-bottom: 10px;
+
+            max-width: 430px;
+        }
+
+
+        /* Blue Heading Text */
+
+        .trusted-stay-highlight {
+            color: #0878f9;
+        }
+
+
+        /* Description */
+
+        .trusted-stay-description {
+            max-width: 430px;
+
+            color: #666666;
+
+            font-size: 11px;
+
+            line-height: 1.6;
+
+            margin-bottom: 18px;
+        }
+
+
+        /* =========================================
+           READ MORE BUTTON
+        ========================================= */
+
+        .trusted-stay-button {
+            display: inline-block;
+
+            padding: 7px 14px;
+
+            border: 1px solid #0878f9;
+
+            border-radius: 3px;
+
+            background: #ffffff;
+
+            color: #0878f9;
+
+            font-size: 8px;
+
+            text-decoration: none;
+
+            transition: all 0.3s ease;
+        }
+
+
+        .trusted-stay-button:hover {
+            background: #0878f9;
+
+            color: #ffffff;
+        }
+
+
+        /* =========================================
+           TABLET RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 991px) {
+
+            .trusted-stay-section {
+                padding: 55px 0;
+            }
+
+
+            .trusted-stay-shape {
+                width: 280px;
+                height: 280px;
+
+                right: -70px;
+            }
+
+
+            .trusted-stay-images {
+                min-height: 300px;
+            }
+
+
+            .trusted-stay-photo-one {
+                left: 8%;
+
+                width: 58%;
+
+                height: 180px;
+            }
+
+
+            .trusted-stay-photo-two {
+                top: 100px;
+
+                right: 5%;
+
+                width: 50%;
+
+                height: 135px;
+            }
+
+
+            .trusted-stay-content {
+                padding: 20px 10px;
+            }
+
+
+            .trusted-stay-heading {
+                font-size: 21px;
+            }
+
+        }
+
+
+        /* =========================================
+           MOBILE RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 767px) {
+
+            .trusted-stay-section {
+                padding: 45px 20px 60px;
+            }
+
+
+            /* Hide decorative shape on mobile */
+
+            .trusted-stay-shape {
+                width: 220px;
+                height: 220px;
+
+                right: -100px;
+                top: 40px;
+
+                opacity: 0.7;
+            }
+
+
+            /* Image area */
+
+            .trusted-stay-images {
+                min-height: 300px;
+
+                margin-bottom: 20px;
+            }
+
+
+            .trusted-stay-photo-one {
+                top: 0;
+                left: 5%;
+
+                width: 65%;
+                height: 190px;
+            }
+
+
+            .trusted-stay-photo-two {
+                top: 110px;
+                right: 5%;
+
+                width: 58%;
+                height: 145px;
+            }
+
+
+            /* Text */
+
+            .trusted-stay-content {
+                padding: 10px 5px;
+
+                text-align: left;
+            }
+
+
+            .trusted-stay-heading {
+                font-size: 24px;
+
+                max-width: 100%;
+            }
+
+
+            .trusted-stay-description {
+                font-size: 12px;
+
+                max-width: 100%;
+
+                line-height: 1.7;
+            }
+
+
+            .trusted-stay-badge {
+                font-size: 8px;
+            }
+
+
+            .trusted-stay-button {
+                font-size: 10px;
+
+                padding: 8px 15px;
+            }
+
+        }
+
+
+        /* =========================================
+           SMALL MOBILE
+        ========================================= */
+
+        @media (max-width: 480px) {
+
+            .trusted-stay-section {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+
+            .trusted-stay-images {
+                min-height: 270px;
+            }
+
+
+            .trusted-stay-photo-one {
+                left: 3%;
+
+                width: 68%;
+
+                height: 170px;
+            }
+
+
+            .trusted-stay-photo-two {
+                top: 100px;
+
+                width: 58%;
+
+                height: 130px;
+            }
+
+
+            .trusted-stay-heading {
+                font-size: 21px;
+            }
+
+
+            .trusted-stay-description {
+                font-size: 11px;
+            }
+
+        }
+
+        /* =====================================================
+           FACILITIES SECTION
+        ===================================================== */
+
+        .comfort-facilities-wrapper {
+            width: 100%;
+            min-height: 420px;
+
+            background-color: #0d55ad;
+
+            padding: 32px 0 30px;
+
+            overflow: hidden;
+        }
+
+
+        /* =====================================================
+           FACILITIES HEADER
+        ===================================================== */
+
+        .comfort-facilities-header {
+            text-align: center;
+
+            margin-bottom: 20px;
+        }
+
+
+        /* Facilities small label */
+
+        .comfort-facilities-label {
+            display: inline-block;
+
+            background-color: #ffffff;
+
+            color: #0878f9;
+
+            font-size: 7px;
+
+            font-weight: 600;
+
+            text-transform: uppercase;
+
+            padding: 4px 10px;
+
+            border-radius: 20px;
+
+            margin-bottom: 7px;
+        }
+
+
+        /* Main heading */
+
+        .comfort-facilities-title {
+            color: #ffffff;
+
+            font-size: 18px;
+
+            font-weight: 700;
+
+            line-height: 1.15;
+
+            max-width: 330px;
+
+            margin: 0 auto;
+        }
+
+
+        /* =====================================================
+           FACILITY CARD
+        ===================================================== */
+
+        .comfort-facility-card {
+            position: relative;
+
+            width: 100%;
+
+            height: 94px;
+
+            background-color: #ffffff;
+
+            border-radius: 6px;
+
+            padding: 11px 12px;
+
+            overflow: hidden;
+
+            transition: transform 0.3s ease,
+                        box-shadow 0.3s ease;
+        }
+
+
+        /* Card hover */
+
+        .comfort-facility-card:hover {
+            transform: translateY(-3px);
+
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+        }
+
+
+        /* =====================================================
+           CARD TEXT
+        ===================================================== */
+
+        .comfort-facility-card-title {
+            position: relative;
+
+            z-index: 2;
+
+            color: #171717;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            margin: 0 0 5px;
+
+            max-width: 145px;
+        }
+
+
+        .comfort-facility-card-text {
+            position: relative;
+
+            z-index: 2;
+
+            color: #777777;
+
+            font-size: 7px;
+
+            line-height: 1.35;
+
+            max-width: 145px;
+
+            margin: 0;
+        }
+
+
+        /* =====================================================
+           FACILITY IMAGE
+        ===================================================== */
+
+        .comfort-facility-image {
+            position: absolute;
+
+            right: 8px;
+
+            bottom: 6px;
+
+            width: 62px;
+
+            height: 62px;
+
+            object-fit: contain;
+
+            z-index: 1;
+        }
+
+
+        /* =====================================================
+           BOOTSTRAP ROW SPACING
+        ===================================================== */
+
+        .comfort-facilities-grid {
+            max-width: 1080px;
+
+            margin: 0 auto;
+        }
+
+
+        /* =====================================================
+           TABLET RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 991px) {
+
+            .comfort-facilities-wrapper {
+                padding: 30px 20px;
+            }
+
+
+            .comfort-facility-card {
+                height: 105px;
+            }
+
+
+            .comfort-facility-card-title {
+                font-size: 12px;
+            }
+
+
+            .comfort-facility-card-text {
+                font-size: 8px;
+            }
+
+
+            .comfort-facility-image {
+                width: 68px;
+
+                height: 68px;
+            }
+
+        }
+
+
+        /* =====================================================
+           MOBILE RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 767px) {
+
+            .comfort-facilities-wrapper {
+                padding: 35px 20px;
+            }
+
+
+            .comfort-facilities-title {
+                font-size: 21px;
+
+                max-width: 300px;
+            }
+
+
+            .comfort-facilities-grid {
+                margin-top: 5px;
+            }
+
+
+            .comfort-facility-card {
+                height: 115px;
+
+                padding: 14px;
+            }
+
+
+            .comfort-facility-card-title {
+                font-size: 13px;
+
+                max-width: 180px;
+            }
+
+
+            .comfort-facility-card-text {
+                font-size: 9px;
+
+                max-width: 180px;
+            }
+
+
+            .comfort-facility-image {
+                right: 12px;
+
+                bottom: 8px;
+
+                width: 75px;
+
+                height: 75px;
+            }
+
+        }
+
+
+        /* =====================================================
+           SMALL MOBILE
+        ===================================================== */
+
+        @media (max-width: 480px) {
+
+            .comfort-facilities-wrapper {
+                padding-left: 15px;
+
+                padding-right: 15px;
+            }
+
+
+            .comfort-facilities-title {
+                font-size: 19px;
+            }
+
+
+            .comfort-facility-card {
+                height: 110px;
+            }
+
+
+            .comfort-facility-card-title {
+                font-size: 12px;
+            }
+
+
+            .comfort-facility-card-text {
+                font-size: 8px;
+
+                max-width: 155px;
+            }
+
+
+            .comfort-facility-image {
+                width: 68px;
+
+                height: 68px;
+            }
+
+        }
+/* =====================================================
+           POPULAR PLACES SECTION
+        ===================================================== */
+
+        .destination-showcase-area {
+            width: 100%;
+
+            background-color: #ffffff;
+
+            padding: 28px 0 35px;
+
+            overflow: hidden;
+        }
+
+
+        /* =====================================================
+           SECTION HEADER
+        ===================================================== */
+
+        .destination-heading-zone {
+            text-align: center;
+
+            margin-bottom: 16px;
+        }
+
+
+        .destination-popular-badge {
+            display: inline-block;
+
+            padding: 4px 10px;
+
+            border-radius: 20px;
+
+            background-color: #eef6ff;
+
+            color: #0878f9;
+
+            font-size: 7px;
+
+            font-weight: 600;
+
+            text-transform: uppercase;
+
+            margin-bottom: 7px;
+        }
+
+
+        .destination-main-heading {
+            margin: 0;
+
+            color: #111111;
+
+            font-size: 17px;
+
+            font-weight: 700;
+
+            line-height: 1.2;
+        }
+
+
+        /* =====================================================
+           DESTINATION GRID
+        ===================================================== */
+
+        .destination-card-grid {
+            max-width: 1110px;
+
+            margin: 0 auto;
+        }
+
+
+        /* =====================================================
+           DESTINATION CARD
+        ===================================================== */
+
+        .destination-photo-card {
+            position: relative;
+
+            width: 100%;
+
+            height: 140px;
+
+            overflow: hidden;
+
+            border-radius: 7px;
+
+            background-color: #e9edf2;
+
+            cursor: pointer;
+        }
+
+
+        /* =====================================================
+           DESTINATION IMAGE
+        ===================================================== */
+
+        .destination-photo-image {
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+
+            transition: transform 0.4s ease;
+        }
+
+
+        .destination-photo-card:hover
+        .destination-photo-image {
+
+            transform: scale(1.06);
+        }
+
+
+        /* =====================================================
+           DARK IMAGE OVERLAY
+        ===================================================== */
+
+        .destination-photo-overlay {
+            position: absolute;
+
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            height: 50%;
+
+            background: linear-gradient(
+                transparent,
+                rgba(0, 0, 0, 0.65)
+            );
+
+            z-index: 1;
+        }
+
+
+        /* =====================================================
+           DESTINATION NAME
+        ===================================================== */
+
+        .destination-photo-name {
+            position: absolute;
+
+            left: 9px;
+            bottom: 8px;
+
+            z-index: 2;
+
+            margin: 0;
+
+            color: #ffffff;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            line-height: 1.1;
+        }
+
+
+        /* =====================================================
+           SPECIAL LARGE CARDS
+           Matching screenshot
+        ===================================================== */
+
+        .destination-wide-card {
+            height: 150px;
+        }
+
+
+        /* =====================================================
+           NEAREST LOCATION AREA
+        ===================================================== */
+
+        .destination-location-track {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 25px;
+
+            margin-top: 24px;
+        }
+
+
+        /* =====================================================
+           CAR IMAGE
+        ===================================================== */
+
+        .destination-car-image {
+            width: 65px;
+
+            height: 40px;
+
+            object-fit: contain;
+        }
+
+
+        /* =====================================================
+           LOCATION TEXT
+        ===================================================== */
+
+        .destination-location-text {
+            position: relative;
+
+            min-width: 150px;
+
+            text-align: center;
+
+            color: #0878f9;
+
+            font-size: 8px;
+
+            font-style: italic;
+        }
+
+
+        /* Dotted travel line */
+
+        .destination-location-text::before {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+
+            right: 0;
+
+            top: 50%;
+
+            border-top: 1px dashed #9ec8f7;
+
+            z-index: -1;
+        }
+
+
+        /* =====================================================
+           LOCATION IMAGE
+        ===================================================== */
+
+        .destination-pin-image {
+            width: 55px;
+
+            height: 45px;
+
+            object-fit: contain;
+        }
+
+
+        /* =====================================================
+           TABLET
+        ===================================================== */
+
+        @media (max-width: 991px) {
+
+            .destination-showcase-area {
+                padding: 30px 20px;
+            }
+
+
+            .destination-main-heading {
+                font-size: 20px;
+            }
+
+
+            .destination-photo-card {
+                height: 145px;
+            }
+
+
+            .destination-wide-card {
+                height: 155px;
+            }
+
+
+            .destination-photo-name {
+                font-size: 12px;
+            }
+
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 767px) {
+
+            .destination-showcase-area {
+                padding: 30px 15px 35px;
+            }
+
+
+            .destination-heading-zone {
+                margin-bottom: 18px;
+            }
+
+
+            .destination-main-heading {
+                font-size: 21px;
+            }
+
+
+            .destination-photo-card {
+
+                height: 170px;
+
+                border-radius: 8px;
+            }
+
+
+            .destination-wide-card {
+                height: 170px;
+            }
+
+
+            .destination-photo-name {
+                left: 11px;
+
+                bottom: 10px;
+
+                font-size: 13px;
+            }
+
+
+            .destination-location-track {
+
+                gap: 12px;
+
+                margin-top: 25px;
+            }
+
+
+            .destination-car-image {
+
+                width: 58px;
+
+                height: 38px;
+            }
+
+
+            .destination-location-text {
+
+                min-width: 110px;
+
+                font-size: 8px;
+            }
+
+
+            .destination-pin-image {
+
+                width: 50px;
+
+                height: 40px;
+            }
+
+        }
+
+
+        /* =====================================================
+           SMALL MOBILE
+        ===================================================== */
+
+        @media (max-width: 480px) {
+
+            .destination-showcase-area {
+                padding-left: 12px;
+
+                padding-right: 12px;
+            }
+
+
+            .destination-main-heading {
+                font-size: 19px;
+            }
+
+
+            .destination-photo-card {
+
+                height: 155px;
+            }
+
+
+            .destination-wide-card {
+
+                height: 155px;
+            }
+
+
+            .destination-photo-name {
+
+                font-size: 11px;
+
+                left: 9px;
+
+                bottom: 8px;
+            }
+
+
+            .destination-location-track {
+
+                gap: 8px;
+            }
+
+
+            .destination-car-image {
+
+                width: 50px;
+            }
+
+
+            .destination-location-text {
+
+                min-width: 90px;
+
+                font-size: 7px;
+            }
+
+
+            .destination-pin-image {
+
+                width: 45px;
+            }
+
+        }
+ /* =====================================================
+           WHY CHOOSE US SECTION
+        ===================================================== */
+
+        .guest-confidence-section {
+            position: relative;
+
+            width: 100%;
+
+            background-color: #eaf4ff;
+
+            padding: 30px 0;
+
+            overflow: hidden;
+        }
+
+
+        /* =====================================================
+           MAIN CONTENT CONTAINER
+        ===================================================== */
+
+        .guest-confidence-container {
+            max-width: 1080px;
+
+            margin: 0 auto;
+        }
+
+
+        /* =====================================================
+           IMAGE AREA
+        ===================================================== */
+
+        .guest-confidence-visual {
+            position: relative;
+
+            width: 100%;
+
+            min-height: 220px;
+        }
+
+
+        /* Main photo */
+
+        .guest-confidence-photo {
+            position: absolute;
+
+            left: 8%;
+
+            top: 0;
+
+            width: 225px;
+
+            height: 215px;
+
+            object-fit: cover;
+
+            border-radius: 0 25px 25px 25px;
+
+            z-index: 2;
+        }
+
+
+        /* =====================================================
+           BLUE CIRCLE DECORATION
+        ===================================================== */
+
+        .guest-confidence-circle {
+            position: absolute;
+
+            left: 33%;
+
+            bottom: -5px;
+
+            width: 105px;
+
+            height: 105px;
+
+            border-radius: 50%;
+
+            background-color: rgba(39, 119, 235, 0.65);
+
+            z-index: 3;
+        }
+
+
+        /* =====================================================
+           CIRCLE TEXT
+        ===================================================== */
+
+        .guest-confidence-circle-text {
+            position: absolute;
+
+            left: 50%;
+
+            top: 50%;
+
+            transform: translate(-50%, -50%);
+
+            width: 80px;
+
+            color: #ffffff;
+
+            font-size: 9px;
+
+            font-weight: 700;
+
+            line-height: 1.35;
+
+            text-align: center;
+
+            z-index: 4;
+        }
+
+
+        /* =====================================================
+           CONTENT AREA
+        ===================================================== */
+
+        .guest-confidence-content {
+            padding: 8px 15px;
+        }
+
+
+        /* Heading */
+
+        .guest-confidence-heading {
+            margin: 0 0 4px;
+
+            color: #111111;
+
+            font-size: 17px;
+
+            font-weight: 700;
+
+            line-height: 1.2;
+        }
+
+
+        /* Blue heading word */
+
+        .guest-confidence-highlight {
+            color: #0878f9;
+        }
+
+
+        /* Description */
+
+        .guest-confidence-description {
+            margin: 0 0 12px;
+
+            max-width: 360px;
+
+            color: #666666;
+
+            font-size: 9px;
+
+            line-height: 1.35;
+
+            font-style: italic;
+        }
+
+
+        /* =====================================================
+           BENEFIT CARDS
+        ===================================================== */
+
+        .guest-confidence-grid {
+            margin-top: 4px;
+        }
+
+
+        .guest-confidence-card {
+            position: relative;
+
+            min-height: 61px;
+
+            background-color: #ffffff;
+
+            border-left: 2px solid #0b4b94;
+
+            border-right: 2px solid #0b4b94;
+
+            border-radius: 6px;
+
+            padding: 10px 10px;
+
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+        }
+
+
+        /* =====================================================
+           CARD TITLE
+        ===================================================== */
+
+        .guest-confidence-card-title {
+            margin: 0 0 4px;
+
+            color: #222222;
+
+            font-size: 9px;
+
+            font-weight: 700;
+
+            line-height: 1.2;
+        }
+
+
+        /* Green check */
+
+        .guest-confidence-check {
+            color: #16a34a;
+
+            font-size: 9px;
+
+            font-weight: 700;
+
+            margin-right: 3px;
+        }
+
+
+        /* Card description */
+
+        .guest-confidence-card-text {
+            margin: 0;
+
+            max-width: 150px;
+
+            color: #555555;
+
+            font-size: 6.5px;
+
+            line-height: 1.35;
+        }
+
+
+        /* =====================================================
+           TABLET RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 991px) {
+
+            .guest-confidence-section {
+                padding: 35px 20px;
+            }
+
+
+            .guest-confidence-photo {
+                left: 5%;
+
+                width: 210px;
+
+                height: 205px;
+            }
+
+
+            .guest-confidence-circle {
+                left: 30%;
+
+                width: 100px;
+
+                height: 100px;
+            }
+
+
+            .guest-confidence-content {
+                padding-left: 10px;
+            }
+
+
+            .guest-confidence-heading {
+                font-size: 19px;
+            }
+
+
+            .guest-confidence-description {
+                font-size: 9px;
+            }
+
+        }
+
+
+        /* =====================================================
+           MOBILE RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 767px) {
+
+            .guest-confidence-section {
+                padding: 35px 18px 45px;
+            }
+
+
+            /* Image */
+
+            .guest-confidence-visual {
+                min-height: 280px;
+
+                margin-bottom: 15px;
+            }
+
+
+            .guest-confidence-photo {
+                left: 50%;
+
+                transform: translateX(-50%);
+
+                width: 235px;
+
+                height: 225px;
+
+                border-radius: 0 28px 28px 28px;
+            }
+
+
+            .guest-confidence-circle {
+                left: calc(50% + 45px);
+
+                bottom: 5px;
+
+                width: 105px;
+
+                height: 105px;
+            }
+
+
+            .guest-confidence-circle-text {
+                font-size: 9px;
+            }
+
+
+            /* Content */
+
+            .guest-confidence-content {
+                padding: 5px 0;
+            }
+
+
+            .guest-confidence-heading {
+                font-size: 22px;
+
+                margin-bottom: 6px;
+            }
+
+
+            .guest-confidence-description {
+                max-width: 100%;
+
+                font-size: 10px;
+
+                margin-bottom: 16px;
+            }
+
+
+            /* Cards */
+
+            .guest-confidence-card {
+                min-height: 75px;
+
+                padding: 12px;
+            }
+
+
+            .guest-confidence-card-title {
+                font-size: 11px;
+            }
+
+
+            .guest-confidence-card-text {
+                max-width: 220px;
+
+                font-size: 8px;
+            }
+
+        }
+
+
+        /* =====================================================
+           SMALL MOBILE
+        ===================================================== */
+
+        @media (max-width: 480px) {
+
+            .guest-confidence-section {
+                padding-left: 12px;
+
+                padding-right: 12px;
+            }
+
+
+            .guest-confidence-visual {
+                min-height: 255px;
+            }
+
+
+            .guest-confidence-photo {
+                width: 210px;
+
+                height: 205px;
+            }
+
+
+            .guest-confidence-circle {
+                left: calc(50% + 35px);
+
+                width: 95px;
+
+                height: 95px;
+            }
+
+
+            .guest-confidence-circle-text {
+                width: 75px;
+
+                font-size: 8px;
+            }
+
+
+            .guest-confidence-heading {
+                font-size: 20px;
+            }
+
+
+            .guest-confidence-card {
+                min-height: 70px;
+            }
+
+
+            .guest-confidence-card-title {
+                font-size: 10px;
+            }
+
+
+            .guest-confidence-card-text {
+                font-size: 7px;
+            }
+
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg custom-navbar">
+
+        <div class="container-fluid">
+
+            <!-- Logo -->
+            <a href="#" class="logo">
+                Logo
+            </a>
+
+            <!-- Mobile Toggle Button -->
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu"
+                aria-controls="navbarMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menu -->
+            <div class="collapse navbar-collapse" id="navbarMenu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact us</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+    <!-- =========================
+         HERO SECTION
+    ========================= -->
+
+    <section class="hero">
+
+
+        <!-- Text -->
+
+        <div class="hero-content">
+
+            <h1>
+                Find Your Perfect Room<br>
+                in Seconds
+            </h1>
+
+            <p>
+                Seamless room booking for work, travel, or stay
+                anywhere, anytime.
+            </p>
+
+        </div>
+
+
+        <!-- =========================
+             BOOKING BOX
+        ========================= -->
+
+        <div class="booking-box">
+
+
+            <!-- SEARCH BUTTON
+                 Initially ONLY this is visible -->
+
+            <div class="search-only" id="searchOnly">
+
+                <button
+                    class="search-btn"
+                    onclick="showBookingForm()">
+
+                    Search
+
+                </button>
+
+            </div>
+
+
+            <!-- =========================
+                 BOOKING FORM
+                 Hidden initially
+            ========================= -->
+
+            <div id="bookingForm">
+
+                <div class="row align-items-center g-0">
+
+
+                    <!-- CHECK IN -->
+
+                    <div class="col-lg-3 col-md-3 col-12">
+
+                        <div class="booking-item">
+
+                            <label class="booking-label">
+                                Check in
+                            </label>
+
+                            <input
+                                type="date"
+                                class="booking-input">
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CHECK OUT -->
+
+                    <div class="col-lg-3 col-md-3 col-12">
+
+                        <div class="booking-item">
+
+                            <label class="booking-label">
+                                Check out
+                            </label>
+
+                            <input
+                                type="date"
+                                class="booking-input">
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- GUESTS -->
+
+                    <div class="col-lg-3 col-md-3 col-12">
+
+                        <div class="booking-item">
+
+                            <label class="booking-label">
+                                Guests & Rooms
+                            </label>
+
+                            <select class="booking-select">
+
+                                <option>
+                                    2 Adults / 1 Child / 1 Room
+                                </option>
+
+                                <option>
+                                    1 Adult / 0 Child / 1 Room
+                                </option>
+
+                                <option>
+                                    2 Adults / 0 Child / 1 Room
+                                </option>
+
+                                <option>
+                                    2 Adults / 2 Children / 1 Room
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- SEARCH ROOMS -->
+
+                    <div class="col-lg-3 col-md-3 col-12">
+
+                        <div class="px-2">
+
+                            <button
+                                class="find-btn"
+                                onclick="findRooms()">
+
+                                Search Rooms
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
+    <script>
+
+        function showBookingForm() {
+
+            // Hide Search button
+            document.getElementById("searchOnly").style.display = "none";
+
+            // Show booking fields
+            document.getElementById("bookingForm")
+                .classList.add("show");
+
+        }
+
+
+        function findRooms() {
+
+            let checkIn =
+                document.querySelectorAll(".booking-input")[0].value;
+
+            let checkOut =
+                document.querySelectorAll(".booking-input")[1].value;
+
+
+            if (checkIn === "" || checkOut === "") {
+
+                alert("Please select Check-in and Check-out dates.");
+
+                return;
+            }
+
+
+            alert(
+                "Searching available rooms..."
+            );
+
+        }
+
+    </script>
+
+    <!-- =========================================
+         ABOUT US SECTION
+    ========================================== -->
+
+    <section class="trusted-stay-section">
+
+
+        <!-- Decorative Hexagon -->
+
+        <div class="trusted-stay-shape"></div>
+
+
+        <div class="container">
+
+
+            <div class="row align-items-center">
+
+
+                <!-- =================================
+                     IMAGE COLUMN
+                ================================== -->
+
+                <div class="col-lg-6 col-md-6 col-12">
+
+
+                    <div class="trusted-stay-images">
+
+
+                        <!-- First Hotel Image -->
+
+                        <img
+                            src="projectim/13560a30b352f0328617fd9d89357a2994f0822e.jpg"
+                            alt="Hotel Room"
+                            class="trusted-stay-photo-one">
+
+
+                        <!-- Second Hotel Image -->
+
+                        <img
+                            src="projectim/1ebe4e2db14acef92e38ac4f932a7f6c982b3efa.jpg"
+                            alt="Comfortable Hotel Room"
+                            class="trusted-stay-photo-two">
+
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================
+                     CONTENT COLUMN
+                ================================== -->
+
+                <div class="col-lg-6 col-md-6 col-12">
+
+
+                    <div class="trusted-stay-content">
+
+
+                        <!-- Badge -->
+
+                        <span class="trusted-stay-badge">
+                            About Us
+                        </span>
+
+
+                        <!-- Heading -->
+
+                        <h2 class="trusted-stay-heading">
+
+                            Your Trusted Partner in Comfortable
+                            <span class="trusted-stay-highlight">
+                                & Convenient Stays
+                            </span>
+
+                        </h2>
+
+
+                        <!-- Description -->
+
+                        <p class="trusted-stay-description">
+
+                            We are a digital-first room booking platform
+                            dedicated to making your travel and work stay
+                            smoother. From cozy homestays to corporate rooms,
+                            we connect you with verified hosts across cities
+                            with real-time availability and add-on amenities.
+
+                        </p>
+
+
+                        <!-- Button -->
+
+                        <a
+                            href="#"
+                            class="trusted-stay-button">
+
+                            Read more
+
+                        </a>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    <!-- =====================================================
+         FACILITIES SECTION START
+    ====================================================== -->
+
+    <section class="comfort-facilities-wrapper">
+
+
+        <div class="container">
+
+
+            <!-- =================================================
+                 SECTION HEADER
+            ================================================== -->
+
+            <div class="comfort-facilities-header">
+
+                <span class="comfort-facilities-label">
+                    Facilities
+                </span>
+
+
+                <h2 class="comfort-facilities-title">
+
+                    Services Designed for Comfort
+                    <br>
+                    and Control
+
+                </h2>
+
+            </div>
+
+
+            <!-- =================================================
+                 FACILITY CARDS
+            ================================================== -->
+
+            <div class="row g-2 comfort-facilities-grid">
+
+
+                <!-- =================================================
+                     CARD 1 - ROOM BOOKING
+                ================================================== -->
+
+                <div class="col-lg-4 col-md-6 col-12">
+
+                    <div class="comfort-facility-card">
+
+
+                        <h3 class="comfort-facility-card-title">
+                            Room Booking
+                        </h3>
+
+
+                        <p class="comfort-facility-card-text">
+
+                            Real-time availability across
+                            budget to premium rooms.
+
+                        </p>
+
+
+                        <img
+                            src="projectim/b37e12ad70fab5e64e04ba7061705c580e009c0c (1).png"
+                            alt="Room Booking"
+                            class="comfort-facility-image">
+
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     CARD 2 - HIGH SPEED WIFI
+                ================================================== -->
+
+                <div class="col-lg-4 col-md-6 col-12">
+
+                    <div class="comfort-facility-card">
+
+
+                        <h3 class="comfort-facility-card-title">
+                            High-Speed WiFi
+                        </h3>
+
+
+                        <p class="comfort-facility-card-text">
+
+                            Stay connected with seamless
+                            internet service.
+
+                        </p>
+
+
+                        <img
+                            src="projectim/a2055f1cf57df97d992fd3f4896409ec033c332c (1).png"
+                            alt="High Speed WiFi"
+                            class="comfort-facility-image">
+
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     CARD 3 - AIR CONDITIONING
+                ================================================== -->
+
+                <div class="col-lg-4 col-md-6 col-12">
+
+                    <div class="comfort-facility-card">
+
+
+                        <h3 class="comfort-facility-card-title">
+                            Air Conditioning
+                        </h3>
+
+
+                        <p class="comfort-facility-card-text">
+
+                            All rooms equipped with powerful
+                            air conditioning.
+
+                        </p>
+
+
+                        <img
+                            src="projectim/3f13e19be5fc99d83cda5cc2426d101838220508 (2).png"
+                            alt="Air Conditioning"
+                            class="comfort-facility-image">
+
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     CARD 4 - POWER BACKUP
+                ================================================== -->
+
+                <div class="col-lg-4 col-md-6 col-12">
+
+                    <div class="comfort-facility-card">
+
+
+                        <h3 class="comfort-facility-card-title">
+                            Power Backup
+                        </h3>
+
+
+                        <p class="comfort-facility-card-text">
+
+                            No more blackouts—24/7
+                            uninterrupted power.
+
+                        </p>
+
+
+                        <img
+                            src="projectim/70cedea8aaa3af7fba4de59a3d9040b8674d4fcd (1).png"
+                            alt="Power Backup"
+                            class="comfort-facility-image">
+
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     CARD 5 - SMART KEY ACCESS
+                ================================================== -->
+
+                <div class="col-lg-4 col-md-6 col-12">
+
+                    <div class="comfort-facility-card">
+
+
+                        <h3 class="comfort-facility-card-title">
+                            Smart Key Access
+                        </h3>
+
+
+                        <p class="comfort-facility-card-text">
+
+                            Digital key solution system
+                            for enhanced safety.
+
+                        </p>
+
+
+                        <img
+                            src="projectim/46c49678624af57e580ee7b4e8ea1c1f4c565b94 (1).png"
+                            alt="Smart Key Access"
+                            class="comfort-facility-image">
+
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     CARD 6 - HOT WATER
+                ================================================== -->
+
+                <div class="col-lg-4 col-md-6 col-12">
+
+                    <div class="comfort-facility-card">
+
+
+                        <h3 class="comfort-facility-card-title">
+                            Hot Water Facility
+                        </h3>
+
+
+                        <p class="comfort-facility-card-text">
+
+                            Instant hot showers to start
+                            your day right.
+
+                        </p>
+
+
+                        <img
+                            src="projectim/cb60a6760335b5ea3b71e41c9d7723d882519848 (1).png"
+                            alt="Hot Water Facility"
+                            class="comfort-facility-image">
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         BOOTSTRAP JAVASCRIPT
+    ==================================================== -->
+
+    <!-- =====================================================
+         POPULAR PLACES SECTION START
+    ====================================================== -->
+
+    <section class="destination-showcase-area">
+
+
+        <div class="container">
+
+
+            <!-- =================================================
+                 SECTION HEADING
+            ================================================== -->
+
+            <div class="destination-heading-zone">
+
+                <span class="destination-popular-badge">
+                    Popular Places
+                </span>
+
+
+                <h2 class="destination-main-heading">
+                    Discover more popular places here.
+                </h2>
+
+            </div>
+
+
+            <!-- =================================================
+                 DESTINATION GRID
+            ================================================== -->
+
+            <div class="row g-2 destination-card-grid">
+
+
+                <!-- =================================================
+                     1. MUNNAR
+                ================================================== -->
+
+                <div class="col-lg-3 col-md-6 col-6">
+
+                    <div class="destination-photo-card">
+
+                        <img
+                            src="projectim/25317c511a84414776778657b0f559b3b2d694cc.png"
+                            alt="Munnar"
+                            class="destination-photo-image">
+
+                        <div class="destination-photo-overlay"></div>
+
+                        <h3 class="destination-photo-name">
+                            Munnar
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     2. KANTHALLOOR
+                ================================================== -->
+
+                <div class="col-lg-3 col-md-6 col-6">
+
+                    <div class="destination-photo-card">
+
+                        <img
+                            src="projectim/9bbb0289aaa5283e9f3322074b2fe315bc4f455a.png"
+                            alt="Kanthalloor"
+                            class="destination-photo-image">
+
+                        <div class="destination-photo-overlay"></div>
+
+                        <h3 class="destination-photo-name">
+                            Kanthalloor
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     3. VALPARAI
+                ================================================== -->
+
+                <div class="col-lg-3 col-md-6 col-6">
+
+                    <div class="destination-photo-card">
+
+                        <img
+                            src="projectim/d727f5ed63f96d419942716f75619dad3513204c.png"
+                            alt="Valparai"
+                            class="destination-photo-image">
+
+                        <div class="destination-photo-overlay"></div>
+
+                        <h3 class="destination-photo-name">
+                            Valparai
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     4. KODAIKANAL
+                ================================================== -->
+
+                <div class="col-lg-3 col-md-6 col-6">
+
+                    <div class="destination-photo-card">
+
+                        <img
+                            src="projectim/41bb03c4c8ddf8748c09a5626e98a9f8d9f6b981.png"
+                            alt="Kodaikanal"
+                            class="destination-photo-image">
+
+                        <div class="destination-photo-overlay"></div>
+
+                        <h3 class="destination-photo-name">
+                            Kodaikanal
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     5. MARAYOOR - LARGE
+                ================================================== -->
+
+                <div class="col-lg-4 col-md-6 col-12">
+
+                    <div class="destination-photo-card destination-wide-card">
+
+                        <img
+                            src="projectim/1ddc08ed726bbb644028d280e0195a84cce472e1.png"
+                            alt="Marayoor"
+                            class="destination-photo-image">
+
+                        <div class="destination-photo-overlay"></div>
+
+                        <h3 class="destination-photo-name">
+                            Marayoor
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     6. AMARAVATHI DAM - LARGE
+                ================================================== -->
+
+                <div class="col-lg-4 col-md-6 col-12">
+
+                    <div class="destination-photo-card destination-wide-card">
+
+                        <img
+                            src="projectim/7391a9cc6e309a4e96ae34500acb802945751b30.png"
+                            alt="Amaravathi Dam"
+                            class="destination-photo-image">
+
+                        <div class="destination-photo-overlay"></div>
+
+                        <h3 class="destination-photo-name">
+                            Amaravathi Dam
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     7. THIRUMOORTHY HILLS - LARGE
+                ================================================== -->
+
+                <div class="col-lg-4 col-md-6 col-12">
+
+                    <div class="destination-photo-card destination-wide-card">
+
+                        <img
+                            src="projectim/bcf5b7cd2edc5ff8c63f8a7ae0436afb33ee24dd.png"
+                            alt="Thirumoorthy Hills"
+                            class="destination-photo-image">
+
+                        <div class="destination-photo-overlay"></div>
+
+                        <h3 class="destination-photo-name">
+                            Thirumoorthy Hills
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     8. CHINNAR WILDLIFE
+                ================================================== -->
+
+                <div class="col-lg-3 col-md-6 col-6">
+
+                    <div class="destination-photo-card">
+
+                        <img
+                            src="projectim/144d445629785800cb2141844e53a4a8c2d87556.png"
+                            alt="Chinnar Wildlife"
+                            class="destination-photo-image">
+
+                        <div class="destination-photo-overlay"></div>
+
+                        <h3 class="destination-photo-name">
+                            Chinnar Wildlife
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     9. THOOVANAM WATERFALLS
+                ================================================== -->
+
+                <div class="col-lg-3 col-md-6 col-6">
+
+                    <div class="destination-photo-card">
+
+                        <img
+                            src="projectim/f7f500d3e62a5209356c46505519581e39a0390a.png"
+                            alt="Thoovanam Waterfalls"
+                            class="destination-photo-image">
+
+                        <div class="destination-photo-overlay"></div>
+
+                        <h3 class="destination-photo-name">
+                            Thoovanam waterfalls
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     10. TOPSLIP PARAMBIKULAM
+                ================================================== -->
+
+                <div class="col-lg-3 col-md-6 col-6">
+
+                    <div class="destination-photo-card">
+
+                        <img
+                            src="projectim/2b4c07edb749d79379687a743e62bf8f99d5fe2a.png"
+                            alt="Topslip Parambikulam"
+                            class="destination-photo-image">
+
+                        <div class="destination-photo-overlay"></div>
+
+                        <h3 class="destination-photo-name">
+                            Topslip parambikulam
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     11. PALANI
+                ================================================== -->
+
+                <div class="col-lg-3 col-md-6 col-6">
+
+                    <div class="destination-photo-card">
+
+                        <img
+                            src="projectim/1de56539503b7f9acf575d17db0de4a3bf9f73ba.png"
+                            alt="Palani"
+                            class="destination-photo-image">
+
+                        <div class="destination-photo-overlay"></div>
+
+                        <h3 class="destination-photo-name">
+                            Palani
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- =================================================
+                 NEAREST LOCATION
+            ================================================== -->
+
+            <div class="destination-location-track">
+
+
+                <!-- Car -->
+
+                <img
+                    src="projectim/Character_00000079460881668709463640000012129870953386732430_ (4).jpg"
+                    alt="Travel"
+                    class="destination-car-image">
+
+
+                <!-- Location text -->
+
+                <span class="destination-location-text">
+                    Nearest Location
+                </span>
+
+
+                <!-- Location -->
+
+                <img
+                    src="projectim/4de35c14d52fc003c25f586706da63350e95abdd.png"
+                    alt="Location"
+                    class="destination-pin-image">
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         BOOTSTRAP JS
+    ====================================================== -->
+
+    <!-- =====================================================
+         WHY CHOOSE US SECTION
+    ====================================================== -->
+
+    <section class="guest-confidence-section">
+
+
+        <div class="container guest-confidence-container">
+
+
+            <div class="row align-items-center">
+
+
+                <!-- =================================================
+                     LEFT IMAGE
+                ================================================== -->
+
+                <div class="col-lg-5 col-md-5 col-12">
+
+
+                    <div class="guest-confidence-visual">
+
+
+                        <!-- Main Image -->
+
+                        <img
+                            src="projectim/d0f4bd41df6e84663db294301e229ddd8822eed4.jpg"
+                            alt="Comfortable hotel stay"
+                            class="guest-confidence-photo">
+
+
+                        <!-- Blue Circle -->
+
+                        <div class="guest-confidence-circle">
+
+
+                            <span class="guest-confidence-circle-text">
+
+                                Your Comfort,
+                                <br>
+                                Our Priority
+
+                            </span>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     RIGHT CONTENT
+                ================================================== -->
+
+                <div class="col-lg-7 col-md-7 col-12">
+
+
+                    <div class="guest-confidence-content">
+
+
+                        <!-- Heading -->
+
+                        <h2 class="guest-confidence-heading">
+
+                            Why
+                            <span class="guest-confidence-highlight">
+                                Choose Us?
+                            </span>
+
+                        </h2>
+
+
+                        <!-- Description -->
+
+                        <p class="guest-confidence-description">
+
+                            We don't just offer rooms — we deliver peace of
+                            mind with every booking.
+
+                        </p>
+
+
+                        <!-- =================================================
+                             BENEFIT CARDS
+                        ================================================== -->
+
+                        <div class="row g-2 guest-confidence-grid">
+
+
+                            <!-- CARD 1 -->
+
+                            <div class="col-md-6 col-12">
+
+                                <div class="guest-confidence-card">
+
+                                    <h3 class="guest-confidence-card-title">
+
+                                        <span class="guest-confidence-check">
+                                            ✅ 
+                                        </span>
+Verified Hosts
+                                
+
+                                    </h3>
+
+                                    <p class="guest-confidence-card-text">
+
+                                        All listings are manually verified
+                                        for quality and safety.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- CARD 2 -->
+
+                            <div class="col-md-6 col-12">
+
+                                <div class="guest-confidence-card">
+
+                                    <h3 class="guest-confidence-card-title">
+
+                                        <span class="guest-confidence-check">
+                                            📞 
+                                        </span>
+24/7 Support
+                                    
+
+                                    </h3>
+
+                                    <p class="guest-confidence-card-text">
+
+                                        Our team is always here to help,
+                                        day or night.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- CARD 3 -->
+
+                            <div class="col-md-6 col-12">
+
+                                <div class="guest-confidence-card">
+
+                                    <h3 class="guest-confidence-card-title">
+
+                                        <span class="guest-confidence-check">
+                                            🌐 
+                                        </span>
+                                      Multi-Device Access
+                                    
+
+                                    </h3>
+
+                                    <p class="guest-confidence-card-text">
+
+                                        Book and manage your stays across
+                                        mobile, tablet, or desktop.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- CARD 4 -->
+
+                            <div class="col-md-6 col-12">
+
+                                <div class="guest-confidence-card">
+
+                                    <h3 class="guest-confidence-card-title">
+
+                                        <span class="guest-confidence-check">
+                                            💸 
+                                        </span>
+Transparent Pricing
+                                        
+
+                                    </h3>
+
+                                    <p class="guest-confidence-card-text">
+
+                                        No hidden fees. What you see is
+                                        what you pay.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+         FOOTER START
+    ========================= -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="row">
+
+                <!-- =====================
+                     COLUMN 1
+                ====================== -->
+
+                <div class="col-lg-5 col-md-6 footer-column">
+
+                    <!-- Logo -->
+                    <div class="footer-logo">
+
+                        <div class="logo-box">
+                            M
+                        </div>
+
+                        <span class="brand-name">
+                            mangcoding
+                        </span>
+
+                    </div>
+
+
+                    <!-- Description -->
+                    <p class="footer-description">
+
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Pellentesque habitant morbi tristique senectus et netus.
+                        Bell sagittis, volutpat neque sed, commodo nunc.
+                        Donec vitae libero at sapien viverra placerat.
+
+                    </p>
+
+
+                    <!-- Social Media -->
+                    <div class="social-icons">
+
+                        <a href="#">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =====================
+                     COLUMN 2 - PAGES
+                ====================== -->
+
+                <div class="col-lg-2 col-md-2 col-6 footer-column">
+
+                    <h5 class="footer-heading">
+                        Pages
+                    </h5>
+
+                    <ul class="footer-links">
+
+                        <li>
+                            <a href="#">Home it work</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Pricing</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Blog</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Demo</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- =====================
+                     COLUMN 3 - SERVICE
+                ====================== -->
+
+                <div class="col-lg-2 col-md-2 col-6 footer-column">
+
+                    <h5 class="footer-heading">
+                        Service
+                    </h5>
+
+                    <ul class="footer-links">
+
+                        <li>
+                            <a href="#">Shopify</a>
+                        </li>
+
+                        <li>
+                            <a href="#">WordPress</a>
+                        </li>
+
+                        <li>
+                            <a href="#">UI/UX Design</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- =====================
+                     COLUMN 4 - CONTACT
+                ====================== -->
+
+                <div class="col-lg-3 col-md-6 footer-column">
+
+                    <h5 class="footer-heading">
+                        Contact
+                    </h5>
+
+
+                    <!-- Phone -->
+                    <div class="contact-item">
+
+                        <i class="bi bi-telephone-fill"></i>
+
+                        <span>
+                            (406) 555-0120
+                        </span>
+
+                    </div>
+
+
+                    <!-- Email -->
+                    <div class="contact-item">
+
+                        <i class="bi bi-envelope-fill"></i>
+
+                        <span>
+                            mangcoding123@gmail.com
+                        </span>
+
+                    </div>
+
+
+                    <!-- Location -->
+                    <div class="contact-item">
+
+                        <i class="bi bi-geo-alt-fill"></i>
+
+                        <span>
+                            2972 Westheimer Rd. Santa Ana,
+                            Illinois 85486
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+    
+</body>
+
+</html>
+ <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+</body>
+
+</html>

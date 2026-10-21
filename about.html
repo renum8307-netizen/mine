@@ -1,0 +1,1860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="about-style.css">
+    <style>
+                * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar */
+        .custom-navbar {
+            background-color: #0878f9;
+            min-height: 42px;
+            border: 2px solid #00aaff;
+        }
+
+        /* Logo */
+        .logo {
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        /* Navigation Links */
+        .navbar-nav .nav-link {
+            color: white !important;
+            font-size: 11px;
+            margin-left: 20px;
+            transition: 0.3s;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #d9d9d9 !important;
+        }
+
+        /* Mobile menu button */
+        .navbar-toggler {
+            border: 1px solid white;
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+
+        .navbar-toggler-icon {
+            filter: brightness(0) invert(1);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 991px) {
+
+            .custom-navbar {
+                padding: 8px 15px;
+            }
+
+            .navbar-nav {
+                margin-top: 10px;
+            }
+
+            .navbar-nav .nav-link {
+                margin-left: 0;
+                padding: 8px 0;
+                font-size: 14px;
+            }
+        }
+        
+        /* =========================
+           FOOTER
+        ========================= */
+
+        .footer {
+            background-color: #07356d;
+            color: white;
+            border: 2px solid #00a9ff;
+            padding: 40px 0 25px;
+        }
+
+        /* Brand */
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .logo-box {
+            width: 20px;
+            height: 20px;
+            background-color: #00d9ff;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .brand-name {
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        /* Description */
+        .footer-description {
+            color: #d5e1ef;
+            font-size: 9px;
+            line-height: 1.8;
+            max-width: 300px;
+            margin-bottom: 25px;
+        }
+
+        /* Headings */
+        .footer-heading {
+            font-size: 11px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        /* Links */
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 13px;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+            color: #d5e1ef;
+            font-size: 9px;
+            transition: 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #00d9ff;
+        }
+
+        /* Contact */
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            color: #d5e1ef;
+            font-size: 9px;
+            margin-bottom: 14px;
+        }
+
+        .contact-item i {
+            color: white;
+            font-size: 11px;
+            min-width: 12px;
+        }
+
+        /* Social Icons */
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 12px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #00d9ff;
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 991px) {
+
+            .footer {
+                padding: 35px 20px 25px;
+            }
+
+            .footer-description {
+                max-width: 400px;
+            }
+
+            .footer-column {
+                margin-bottom: 30px;
+            }
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 576px) {
+
+            .footer {
+                padding: 30px 20px 20px;
+            }
+
+            .footer-logo {
+                margin-bottom: 15px;
+            }
+
+            .footer-description {
+                font-size: 10px;
+                max-width: 100%;
+                line-height: 1.7;
+            }
+
+            .footer-heading {
+                font-size: 13px;
+                margin-bottom: 15px;
+            }
+
+            .footer-links a {
+                font-size: 10px;
+            }
+
+            .contact-item {
+                font-size: 10px;
+            }
+
+            .social-icons {
+                margin-bottom: 10px;
+            }
+        }
+    /* =========================================
+   ABOUT US BANNER
+========================================= */
+
+.renuga-about-banner {
+    position: relative;
+    width: 100%;
+    height: 107px;
+
+    /* Replace this image with your actual image */
+    background-image: url("projectim/7538e65066f77ad13f36fd70a871d661c754ceaa.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   DARK BLUE OVERLAY
+========================================= */
+
+.renuga-about-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(3, 39, 91, 0.88);
+
+    z-index: 1;
+}
+
+
+/* =========================================
+   CONTENT AREA
+========================================= */
+
+.renuga-about-banner .container {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================
+   ABOUT US HEADING
+========================================= */
+
+.renuga-about-heading {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 21px;
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    text-transform: none;
+}
+
+
+/* =========================================
+   BREADCRUMB
+========================================= */
+
+.renuga-about-breadcrumb {
+    margin: 5px 0 0;
+
+    color: #ffffff;
+
+    font-size: 8px;
+    font-weight: 400;
+
+    line-height: 1.4;
+}
+
+
+/* HOME TEXT */
+.renuga-about-home {
+    color: #ffffff;
+}
+
+
+/* SLASH */
+.renuga-about-slash {
+    margin: 0 3px;
+
+    color: #ffffff;
+}
+
+
+/* CURRENT PAGE */
+.renuga-about-current {
+    color: #ffffff;
+}
+
+
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
+
+@media (min-width: 576px) and (max-width: 991px) {
+
+    .renuga-about-banner {
+        height: 150px;
+    }
+
+    .renuga-about-heading {
+        font-size: 28px;
+    }
+
+    .renuga-about-breadcrumb {
+        font-size: 10px;
+        margin-top: 7px;
+    }
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 575px) {
+
+    .renuga-about-banner {
+        height: 140px;
+
+        background-position: center;
+    }
+
+    .renuga-about-heading {
+        font-size: 24px;
+    }
+
+    .renuga-about-breadcrumb {
+        font-size: 9px;
+
+        margin-top: 6px;
+    }
+}
+
+
+/* =========================================
+   LARGE SCREEN
+========================================= */
+
+@media (min-width: 1200px) {
+
+    .renuga-about-banner {
+        height: 180px;
+    }
+
+    .renuga-about-heading {
+        font-size: 32px;
+    }
+
+    .renuga-about-breadcrumb {
+        font-size: 11px;
+    }
+}
+/* ==========================================
+   ROOM INTRO SECTION
+========================================== */
+
+.renuga-room-intro {
+    width: 100%;
+    padding: 30px 0;
+    background: #ffffff;
+}
+
+
+/* ==========================================
+   MAIN ROW
+========================================== */
+
+.renuga-room-row {
+    min-height: 185px;
+}
+
+
+/* ==========================================
+   IMAGE WRAPPER
+========================================== */
+
+.renuga-room-photo-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 257px;
+    margin-left: 0;
+}
+
+
+/* ==========================================
+   ROOM IMAGE
+========================================== */
+
+.renuga-room-photo {
+    width: 100%;
+    height: 185px;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 13px;
+}
+
+
+/* ==========================================
+   FLOATING SERVICE BADGE
+========================================== */
+
+.renuga-room-badge {
+    position: absolute;
+
+    top: 48px;
+    right: -10px;
+
+    width: 95px;
+    min-height: 42px;
+
+    background: #ffffff;
+
+    border-radius: 8px;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+
+    display: flex;
+    align-items: center;
+
+    padding: 6px 7px;
+
+    z-index: 2;
+}
+
+
+/* ==========================================
+   BADGE IMAGE
+========================================== */
+
+.renuga-badge-image {
+    width: 18px;
+    height: 18px;
+
+    object-fit: contain;
+
+    margin-right: 4px;
+}
+
+
+/* ==========================================
+   BADGE TEXT
+========================================== */
+
+.renuga-badge-content {
+    display: flex;
+    flex-direction: column;
+
+    line-height: 1.05;
+}
+
+
+.renuga-badge-content strong {
+    color: #222222;
+
+    font-size: 7px;
+    font-weight: 600;
+}
+
+
+.renuga-badge-content span {
+    color: #222222;
+
+    font-size: 7px;
+    font-weight: 400;
+}
+
+
+/* ==========================================
+   RIGHT CONTENT
+========================================== */
+
+.renuga-room-details {
+    padding-left: 10px;
+    max-width: 470px;
+}
+
+
+/* ==========================================
+   HEADING
+========================================== */
+
+.renuga-room-title {
+    margin: 0 0 8px 0;
+
+    color: #222222;
+
+    font-size: 17px;
+    font-weight: 700;
+
+    line-height: 1.15;
+}
+
+
+.renuga-room-title span {
+    color: #1688e8;
+}
+
+
+/* ==========================================
+   DESCRIPTION
+========================================== */
+
+.renuga-room-description {
+    margin: 0 0 17px 0;
+
+    color: #777777;
+
+    font-size: 9px;
+    font-weight: 400;
+
+    line-height: 1.5;
+}
+
+
+/* ==========================================
+   BOOK BUTTON
+========================================== */
+
+.renuga-room-button {
+    display: inline-block;
+
+    padding: 7px 13px;
+
+    background: #087cf0;
+
+    color: #ffffff;
+
+    font-size: 7px;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    border-radius: 4px;
+
+    transition: all 0.3s ease;
+}
+
+
+.renuga-room-button:hover {
+    background: #0565c4;
+    color: #ffffff;
+}
+
+
+/* ==========================================
+   TABLET RESPONSIVE
+========================================== */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .renuga-room-intro {
+        padding: 40px 0;
+    }
+
+    .renuga-room-photo {
+        height: 210px;
+    }
+
+    .renuga-room-photo-wrap {
+        max-width: 100%;
+    }
+
+    .renuga-room-details {
+        padding-left: 15px;
+    }
+
+    .renuga-room-title {
+        font-size: 21px;
+    }
+
+    .renuga-room-description {
+        font-size: 10px;
+    }
+
+    .renuga-room-badge {
+        right: -8px;
+    }
+}
+
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 767px) {
+
+    .renuga-room-intro {
+        padding: 35px 15px;
+    }
+
+    .renuga-room-row {
+        row-gap: 25px;
+    }
+
+    .renuga-room-photo-wrap {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .renuga-room-photo {
+        width: 100%;
+        height: 230px;
+    }
+
+    .renuga-room-badge {
+        top: 45px;
+        right: 8px;
+
+        width: 105px;
+    }
+
+    .renuga-room-details {
+        max-width: 100%;
+        padding-left: 0;
+
+        text-align: left;
+    }
+
+    .renuga-room-title {
+        font-size: 22px;
+        line-height: 1.2;
+    }
+
+    .renuga-room-description {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+    .renuga-room-button {
+        font-size: 10px;
+        padding: 9px 16px;
+    }
+}
+
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 400px) {
+
+    .renuga-room-photo {
+        height: 200px;
+    }
+
+    .renuga-room-title {
+        font-size: 20px;
+    }
+
+    .renuga-room-description {
+        font-size: 11px;
+    }
+
+    .renuga-room-badge {
+        width: 100px;
+    }
+}
+/* ==========================================
+   WHY CHOOSE US SECTION
+========================================== */
+
+.renuga-choice-section {
+    width: 100%;
+
+    background: #e8f2ff;
+
+    padding: 32px 0;
+}
+
+
+/* ==========================================
+   SECTION HEADING
+========================================== */
+
+.renuga-choice-heading {
+    margin-bottom: 20px;
+
+    padding-left: 3px;
+}
+
+
+.renuga-choice-heading h2 {
+    margin: 0;
+
+    color: #222222;
+
+    font-size: 17px;
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+
+.renuga-choice-heading h2 span {
+    color: #087cf0;
+}
+
+
+/* ==========================================
+   CARDS ROW
+========================================== */
+
+.renuga-choice-card-row {
+    margin: 0;
+}
+
+
+/* ==========================================
+   FEATURE CARD
+========================================== */
+
+.renuga-choice-card {
+    height: 61px;
+
+    background: #ffffff;
+
+    border-left: 2px solid #073b78;
+    border-right: 2px solid #073b78;
+
+    border-radius: 7px;
+
+    padding: 10px 9px;
+
+    transition: all 0.3s ease;
+}
+
+
+/* ==========================================
+   CARD TITLE
+========================================== */
+
+.renuga-choice-card-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 4px;
+
+    margin-bottom: 3px;
+}
+
+
+/* ==========================================
+   CARD IMAGE
+========================================== */
+
+.renuga-choice-image {
+    width: 10px;
+    height: 10px;
+
+    object-fit: contain;
+
+    flex-shrink: 0;
+}
+
+
+/* ==========================================
+   CARD TITLE TEXT
+========================================== */
+
+.renuga-choice-card-title strong {
+    color: #222222;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    line-height: 1.1;
+}
+
+
+/* ==========================================
+   CARD DESCRIPTION
+========================================== */
+
+.renuga-choice-card p {
+    margin: 0;
+
+    color: #555555;
+
+    font-size: 6px;
+    font-weight: 400;
+
+    line-height: 1.45;
+}
+
+
+/* ==========================================
+   CARD HOVER
+========================================== */
+
+.renuga-choice-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .renuga-choice-section {
+        padding: 40px 0;
+    }
+
+    .renuga-choice-heading h2 {
+        font-size: 23px;
+    }
+
+    .renuga-choice-card {
+        height: auto;
+        min-height: 80px;
+
+        padding: 13px;
+    }
+
+    .renuga-choice-card-title strong {
+        font-size: 10px;
+    }
+
+    .renuga-choice-card p {
+        font-size: 8px;
+    }
+
+    .renuga-choice-image {
+        width: 13px;
+        height: 13px;
+    }
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 767px) {
+
+    .renuga-choice-section {
+        padding: 35px 15px;
+    }
+
+    .renuga-choice-heading {
+        margin-bottom: 20px;
+
+        text-align: center;
+    }
+
+    .renuga-choice-heading h2 {
+        font-size: 23px;
+    }
+
+    .renuga-choice-card {
+        height: auto;
+        min-height: 85px;
+
+        padding: 14px;
+    }
+
+    .renuga-choice-card-title strong {
+        font-size: 11px;
+    }
+
+    .renuga-choice-card p {
+        font-size: 9px;
+
+        line-height: 1.5;
+    }
+
+    .renuga-choice-image {
+        width: 14px;
+        height: 14px;
+    }
+}
+
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 400px) {
+
+    .renuga-choice-heading h2 {
+        font-size: 21px;
+    }
+
+    .renuga-choice-card {
+        min-height: 82px;
+    }
+
+    .renuga-choice-card-title strong {
+        font-size: 10px;
+    }
+
+    .renuga-choice-card p {
+        font-size: 8px;
+    }
+}
+/* ==========================================
+   VISION & MISSION MAIN SECTION
+========================================== */
+
+.renuga-purpose-area {
+    position: relative;
+
+    width: 100%;
+    min-height: 342px;
+
+    background: #ffffff;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+}
+
+
+/* ==========================================
+   LEFT BACKGROUND SHAPE
+========================================== */
+
+.renuga-purpose-shape-left {
+    position: absolute;
+
+    left: -70px;
+    top: 19px;
+
+    width: 280px;
+    height: 280px;
+
+    background: #eef5fd;
+
+    transform: rotate(30deg);
+
+    border-radius: 12px;
+
+    z-index: 0;
+}
+
+
+/* ==========================================
+   RIGHT BACKGROUND SHAPE
+========================================== */
+
+.renuga-purpose-shape-right {
+    position: absolute;
+
+    right: -70px;
+    top: 19px;
+
+    width: 280px;
+    height: 280px;
+
+    background: #eef5fd;
+
+    transform: rotate(30deg);
+
+    border-radius: 12px;
+
+    z-index: 0;
+}
+
+
+/* ==========================================
+   MAIN CONTAINER
+========================================== */
+
+.renuga-purpose-container {
+    position: relative;
+
+    z-index: 2;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+/* ==========================================
+   VISION CONTENT
+========================================== */
+
+.renuga-vision-content {
+    width: 100%;
+
+    max-width: 202px;
+
+    margin: 0 auto;
+}
+
+
+/* ==========================================
+   VISION HEADING
+========================================== */
+
+.renuga-vision-heading {
+    margin: 0 0 4px 0;
+
+    color: #222222;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+
+.renuga-vision-heading span {
+    color: #087cf0;
+}
+
+
+/* ==========================================
+   VISION DESCRIPTION
+========================================== */
+
+.renuga-vision-text {
+    margin: 0 0 10px 0;
+
+    color: #555555;
+
+    font-size: 7px;
+
+    font-weight: 400;
+
+    line-height: 1.4;
+}
+
+
+/* ==========================================
+   VISION IMAGE
+========================================== */
+
+.renuga-vision-image {
+    display: block;
+
+    width: 100%;
+
+    height: 74px;
+
+    object-fit: cover;
+
+    border-radius: 7px;
+}
+
+
+/* ==========================================
+   MISSION CONTENT
+========================================== */
+
+.renuga-mission-content {
+    width: 100%;
+
+    max-width: 202px;
+
+    margin: 0 auto;
+}
+
+
+/* ==========================================
+   MISSION HEADING
+========================================== */
+
+.renuga-mission-heading {
+    margin: 0 0 4px 0;
+
+    color: #222222;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+
+.renuga-mission-heading span {
+    color: #087cf0;
+}
+
+
+/* ==========================================
+   MISSION DESCRIPTION
+========================================== */
+
+.renuga-mission-text {
+    margin: 0 0 10px 0;
+
+    color: #555555;
+
+    font-size: 7px;
+
+    font-weight: 400;
+
+    line-height: 1.4;
+}
+
+
+/* ==========================================
+   MISSION IMAGE
+========================================== */
+
+.renuga-mission-image {
+    display: block;
+
+    width: 100%;
+
+    height: 74px;
+
+    object-fit: cover;
+
+    border-radius: 7px;
+}
+
+
+/* ==========================================
+   TABLET RESPONSIVE
+========================================== */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .renuga-purpose-area {
+        min-height: 380px;
+    }
+
+    .renuga-purpose-shape-left,
+    .renuga-purpose-shape-right {
+        width: 300px;
+        height: 300px;
+    }
+
+    .renuga-vision-content,
+    .renuga-mission-content {
+        max-width: 240px;
+    }
+
+    .renuga-vision-heading,
+    .renuga-mission-heading {
+        font-size: 19px;
+    }
+
+    .renuga-vision-text,
+    .renuga-mission-text {
+        font-size: 9px;
+
+        line-height: 1.5;
+    }
+
+    .renuga-vision-image,
+    .renuga-mission-image {
+        height: 90px;
+    }
+}
+
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 767px) {
+
+    .renuga-purpose-area {
+        min-height: auto;
+
+        padding: 55px 0;
+    }
+
+
+    /* Background shapes */
+    .renuga-purpose-shape-left {
+        left: -140px;
+        top: 20px;
+
+        width: 260px;
+        height: 260px;
+    }
+
+
+    .renuga-purpose-shape-right {
+        right: -140px;
+        top: 330px;
+
+        width: 260px;
+        height: 260px;
+    }
+
+
+    .renuga-purpose-container {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+
+    /* Vision */
+    .renuga-vision-content {
+        max-width: 320px;
+
+        margin: 0 auto 45px auto;
+    }
+
+
+    .renuga-vision-heading {
+        font-size: 22px;
+
+        margin-bottom: 7px;
+    }
+
+
+    .renuga-vision-text {
+        font-size: 11px;
+
+        line-height: 1.6;
+
+        margin-bottom: 13px;
+    }
+
+
+    .renuga-vision-image {
+        height: 150px;
+
+        border-radius: 9px;
+    }
+
+
+    /* Mission */
+    .renuga-mission-content {
+        max-width: 320px;
+
+        margin: 0 auto;
+    }
+
+
+    .renuga-mission-heading {
+        font-size: 22px;
+
+        margin-bottom: 7px;
+    }
+
+
+    .renuga-mission-text {
+        font-size: 11px;
+
+        line-height: 1.6;
+
+        margin-bottom: 13px;
+    }
+
+
+    .renuga-mission-image {
+        height: 150px;
+
+        border-radius: 9px;
+    }
+}
+
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 400px) {
+
+    .renuga-purpose-area {
+        padding: 45px 0;
+    }
+
+
+    .renuga-vision-content,
+    .renuga-mission-content {
+        max-width: 290px;
+    }
+
+
+    .renuga-vision-heading,
+    .renuga-mission-heading {
+        font-size: 20px;
+    }
+
+
+    .renuga-vision-text,
+    .renuga-mission-text {
+        font-size: 10px;
+    }
+
+
+    .renuga-vision-image,
+    .renuga-mission-image {
+        height: 135px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg custom-navbar">
+
+        <div class="container-fluid">
+
+            <!-- Logo -->
+            <a href="#" class="logo">
+                Logo
+            </a>
+
+            <!-- Mobile Toggle Button -->
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu"
+                aria-controls="navbarMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menu -->
+            <div class="collapse navbar-collapse" id="navbarMenu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact us</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+    <!-- About Banner Section -->
+    <section class="renuga-about-banner">
+
+        <!-- Dark Blue Overlay -->
+        <div class="renuga-about-overlay"></div>
+
+        <div class="container h-100">
+            <div class="row h-100 justify-content-center align-items-center">
+
+                <div class="col-12 text-center">
+
+                    <!-- Main Heading -->
+                    <h1 class="renuga-about-heading">
+                        About us
+                    </h1>
+
+                    <!-- Breadcrumb -->
+                    <p class="renuga-about-breadcrumb">
+                        <span class="renuga-about-home">Home</span>
+                        <span class="renuga-about-slash">/</span>
+                        <span class="renuga-about-current">About Us</span>
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Room Booking Section -->
+    <section class="renuga-room-intro">
+
+        <div class="container">
+            <div class="row align-items-center renuga-room-row">
+
+                <!-- LEFT IMAGE -->
+                <div class="col-lg-5 col-md-6 col-12">
+
+                    <div class="renuga-room-photo-wrap">
+
+                        <img src="projectim/1c01504c10006bc4b699da8759de977d1fe172cd.jpg"
+                             alt="Comfortable Hotel Room"
+                             class="renuga-room-photo">
+
+                        <!-- Floating Badge -->
+                       <div class="renuga-room-badge">
+                            
+                            <div class="renuga-badge-content">
+                                <strong>Good Services</strong>
+                                <span>More Customers</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- RIGHT CONTENT -->
+                <div class="col-lg-7 col-md-6 col-12">
+                    <div class="renuga-room-details">
+                        <!-- Heading -->
+                        <h2 class="renuga-room-title">
+                            Making Room Booking Effortless
+                            <br>
+                            &amp; <span>Enjoyable</span>
+                        </h2>
+                        <!-- Description -->
+                        <p class="renuga-room-description">
+                            What started as a small idea to help friends find trusted rooms
+                            quickly has grown into a platform that connects thousands of
+                            travelers with safe, verified, and comfortable rooms across the
+                            country. We believe that finding the right stay shouldn't be stressful
+                            — it should be smooth, secure, and satisfying.
+                        </p>
+
+
+                        <!-- Button -->
+                        <a href="#" class="renuga-room-button">
+                            Book Now
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- Why Choose Us Section -->
+    <section class="renuga-choice-section">
+
+        <div class="container">
+
+            <!-- Section Heading -->
+            <div class="renuga-choice-heading">
+                <h2>
+                    Why <span>Choose Us?</span>
+                </h2>
+            </div>
+
+
+            <!-- Feature Cards -->
+            <div class="row g-3 renuga-choice-card-row">
+
+                <!-- Card 1 -->
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+
+                    <div class="renuga-choice-card">
+
+                        <div class="renuga-choice-card-title">
+
+                            <strong>✅ Verified Hosts</strong>
+
+                        </div>
+
+                        <p>
+                            All listings are manually verified for quality
+                            and safety.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Card 2 -->
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+
+                    <div class="renuga-choice-card">
+
+                        <div class="renuga-choice-card-title">
+
+                            
+
+                            <strong>🌐 Multi-Device Access</strong>
+
+                        </div>
+
+                        <p>
+                            Book and manage your stays across
+                            mobile, tablet, or desktop.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Card 3 -->
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+
+                    <div class="renuga-choice-card">
+
+                        <div class="renuga-choice-card-title">
+
+                            
+
+                            <strong>📞 24/7 Support</strong>
+
+                        </div>
+
+                        <p>
+                            Our team is always there to help,
+                            day or night.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Card 4 -->
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+
+                    <div class="renuga-choice-card">
+
+                        <div class="renuga-choice-card-title">
+                            <strong>💸 Transparent Pricing</strong>
+
+                        </div>
+
+                        <p>
+                            No hidden fees. What you see is
+                            what you pay.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Vision Mission Section -->
+    <section class="renuga-purpose-area">
+
+        <!-- Background Shapes -->
+        <div class="renuga-purpose-shape-left"></div>
+        <div class="renuga-purpose-shape-right"></div>
+
+        <div class="container renuga-purpose-container">
+
+            <div class="row justify-content-center align-items-center">
+
+                <!-- OUR VISION -->
+                <div class="col-lg-4 col-md-5 col-sm-10 col-11">
+
+                    <div class="renuga-vision-content">
+
+                        <h2 class="renuga-vision-heading">
+                            Our <span>Vision</span>
+                        </h2>
+
+                        <p class="renuga-vision-text">
+                            To become the most reliable and user-friendly
+                            platform for comfortable, flexible, and
+                            affordable stays worldwide.
+                        </p>
+
+                        <img
+                            src="projectim/b9b8aa38620352fa7856c52fcbea8477f42ced97.jpg"
+                            alt="Comfortable hotel room"
+                            class="renuga-vision-image">
+
+                    </div>
+
+                </div>
+
+
+                <!-- OUR MISSION -->
+                <div class="col-lg-4 col-md-5 col-sm-10 col-11">
+
+                    <div class="renuga-mission-content">
+
+                        <h2 class="renuga-mission-heading">
+                            Our <span>Mission</span>
+                        </h2>
+
+                        <p class="renuga-mission-text">
+                            To simplify the room booking experience with
+                            seamless technology, trust, and exceptional
+                            support.
+                        </p>
+
+                        <img
+                            src="projectim/2cef4ec3aca285f2261dc326eb68ed62ea702fcc.jpg"
+                            alt="Hotel bedroom"
+                            class="renuga-mission-image">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    
+    <!-- =========================
+         FOOTER START
+    ========================= -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="row">
+
+                <!-- =====================
+                     COLUMN 1
+                ====================== -->
+
+                <div class="col-lg-5 col-md-6 footer-column">
+
+                    <!-- Logo -->
+                    <div class="footer-logo">
+
+                        <div class="logo-box">
+                            M
+                        </div>
+
+                        <span class="brand-name">
+                            mangcoding
+                        </span>
+
+                    </div>
+
+
+                    <!-- Description -->
+                    <p class="footer-description">
+
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Pellentesque habitant morbi tristique senectus et netus.
+                        Bell sagittis, volutpat neque sed, commodo nunc.
+                        Donec vitae libero at sapien viverra placerat.
+
+                    </p>
+
+
+                    <!-- Social Media -->
+                    <div class="social-icons">
+
+                        <a href="#">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =====================
+                     COLUMN 2 - PAGES
+                ====================== -->
+
+                <div class="col-lg-2 col-md-2 col-6 footer-column">
+
+                    <h5 class="footer-heading">
+                        Pages
+                    </h5>
+
+                    <ul class="footer-links">
+
+                        <li>
+                            <a href="#">Home it work</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Pricing</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Blog</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Demo</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- =====================
+                     COLUMN 3 - SERVICE
+                ====================== -->
+
+                <div class="col-lg-2 col-md-2 col-6 footer-column">
+
+                    <h5 class="footer-heading">
+                        Service
+                    </h5>
+
+                    <ul class="footer-links">
+
+                        <li>
+                            <a href="#">Shopify</a>
+                        </li>
+
+                        <li>
+                            <a href="#">WordPress</a>
+                        </li>
+
+                        <li>
+                            <a href="#">UI/UX Design</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- =====================
+                     COLUMN 4 - CONTACT
+                ====================== -->
+
+                <div class="col-lg-3 col-md-6 footer-column">
+
+                    <h5 class="footer-heading">
+                        Contact
+                    </h5>
+
+
+                    <!-- Phone -->
+                    <div class="contact-item">
+
+                        <i class="bi bi-telephone-fill"></i>
+
+                        <span>
+                            (406) 555-0120
+                        </span>
+
+                    </div>
+
+
+                    <!-- Email -->
+                    <div class="contact-item">
+
+                        <i class="bi bi-envelope-fill"></i>
+
+                        <span>
+                            mangcoding123@gmail.com
+                        </span>
+
+                    </div>
+
+
+                    <!-- Location -->
+                    <div class="contact-item">
+
+                        <i class="bi bi-geo-alt-fill"></i>
+
+                        <span>
+                            2972 Westheimer Rd. Santa Ana,
+                            Illinois 85486
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+</body>
+</html>
